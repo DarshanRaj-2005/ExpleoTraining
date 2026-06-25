@@ -1,0 +1,24 @@
+package payloads;
+
+import java.util.HashMap;
+import java.util.Map;
+
+public class PayloadManager {
+	
+	public static Map<String,Object> loginPayload() {
+		Map<String,Object> payload = new HashMap<>();
+		payload.put("email","sam@gmail.com");
+		payload.put("password", "123");
+		
+		return payload;
+	}
+	
+	public static Map<String,Object> invalidloginPayload() {
+		Map<String,Object> payload = new HashMap<>();
+		payload.put("email","sam@gmail.com");
+		payload.put("password", "admin");
+		
+		return payload;
+	}
+	
+}

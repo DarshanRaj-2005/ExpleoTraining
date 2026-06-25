@@ -1,0 +1,158 @@
+package com.expleo.SeleniumBasics;
+
+import java.time.Duration;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
+
+import org.openqa.selenium.Alert;
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import org.openqa.selenium.WebElement;
+
+public class Assessment_Question {
+
+	public static void main(String[] args) {
+
+		WebDriver driver = new ChromeDriver();
+
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
+
+		driver.manage().window().maximize();
+		driver.get("https://demoblaze.com/");
+
+		// Question 1: Login to the Application
+
+		driver.findElement(By.xpath("//a[@id = \"login2\"]")).click();
+
+		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//input[@id = \"loginusername\"]")));
+		driver.findElement(By.xpath("//input[@id = \"loginusername\"]")).sendKeys("admin");
+		driver.findElement(By.xpath("//input[@id = \"loginpassword\"]")).sendKeys("admin");
+
+		driver.findElement(By.xpath("//button[text() = \"Log in\"]")).click();
+
+		String expectedGreeting = "Welcome admin";
+
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//a[text() = \"Welcome admin\"]")));
+		String actualGreeting = driver.findElement(By.xpath("//a[text() = \"Welcome admin\"]")).getText();
+
+		if (expectedGreeting.equals(actualGreeting)) {
+			System.out.println("Login Successful");
+		} else {
+			System.out.println("Login Failed");
+		}
+
+		// Question 2: Category Navigation & Product Handling
+
+		Actions act = new Actions(driver);
+
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+
+		WebElement productsButton = driver.findElement(By.xpath("//a[@id = \"itemc\"][2]"));
+
+		act.click(productsButton).perform();
+
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//a[text() = \"MacBook Pro\"]")));
+
+		List<WebElement> productList = (List<WebElement>) js
+				.executeScript("return document.querySelectorAll(\"div#tbodyid div div div h4\")");
+		List<String> productsName = new ArrayList<>();
+
+		for (WebElement i : productList) {
+			productsName.add(i.getText());
+		}
+
+		Collections.sort(productsName);
+
+		Set<String> sortedSet = new HashSet<>();
+
+		System.out.println("\n\nProduct List");
+		for (String i : productsName) {
+			System.out.println(i);
+			sortedSet.add(i);
+		}
+
+		String expectedTitle = "MacBook Pro";
+		WebElement macBook = (WebElement) js
+				.executeScript("return document.querySelectorAll(\"div#tbodyid div div div h4\")[5]");
+
+		js.executeScript("arguments[0].scrollIntoView()", macBook);
+
+		if (macBook.getText().equals(expectedTitle)) {
+			System.out.println("Found Laptop: " + expectedTitle);
+		} else {
+			System.out.println("Laptop not found.");
+		}
+
+		// Question 3: Add Product to Cart
+		act.moveToElement(macBook).click().perform();
+
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//a[text() = \"Add to cart\"]")));
+		driver.findElement(By.xpath("//a[text() = \"Add to cart\"]")).click();
+
+		wait.until(ExpectedConditions.alertIsPresent());
+
+		Alert alert = driver.switchTo().alert();
+
+		if (alert.getText().equals("Product added.")) {
+			System.out.println("Product added to cart");
+		} else {
+			System.out.println("Product not added to cart");
+		}
+
+		alert.accept();
+
+		driver.findElement(By.xpath("//a[@href = \"cart.html\"]")).click();
+
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//table/tbody/tr/td[2]")));
+
+		String firstProductName = driver.findElement(By.xpath("//table/tbody/tr/td[2]")).getText();
+
+		if (firstProductName.equals(expectedTitle)) {
+			System.out.println("MacBook Pro added to cart.");
+		} else {
+			{
+				System.out.println("MacBook Pro didn't add to cart.");
+			}
+		}
+
+		// Question 4: Place Order
+
+		driver.findElement(By.xpath("//button[text() = \"Place Order\"]")).click();
+
+		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//input[@id = \"name\"]")));
+
+		driver.findElement(By.xpath("//input[@id = \"name\"]")).sendKeys("Vignesh");
+		driver.findElement(By.xpath("//input[@id = \"country\"]")).sendKeys("India");
+		driver.findElement(By.xpath("//input[@id = \"city\"]")).sendKeys("Salem");
+		driver.findElement(By.xpath("//input[@id = \"card\"]")).sendKeys("1234567890");
+		driver.findElement(By.xpath("//input[@id = \"month\"]")).sendKeys("04");
+		driver.findElement(By.xpath("//input[@id = \"year\"]")).sendKeys("2030");
+
+		driver.findElement(By.xpath("//button[text() = \"Purchase\"]")).click();
+
+		WebElement purchase = driver.findElement(By.xpath("//p[@class = \"lead text-muted \"]"));
+
+		if (purchase.getText().contains("Id:")) {
+			System.out.println("Order is placed successfully\n\n");
+			System.out.println(purchase.getText());
+		} else {
+			System.out.println("Order is Unsuccessful");
+		}
+
+		driver.findElement(By.xpath("//button[@class=\"confirm btn btn-lg btn-primary\"]")).click();
+
+		driver.findElement(By.xpath("//button[text() = \"Purchase\"]/preceding-sibling::button")).click();
+
+		driver.findElement(By.xpath("//a[text() = \"Log out\"]")).click();
+
+		driver.quit();
+	}
+}

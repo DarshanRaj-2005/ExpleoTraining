@@ -1,0 +1,21 @@
+package tests;
+
+import org.testng.annotations.Test;
+import base.BaseApi;
+import io.restassured.http.ContentType;
+import payloads.PayloadManager;
+import endPoint.EndPoint;
+
+public class LoginTest extends BaseApi{
+	
+	@Test
+	public static void loginTest() {
+		given()
+		    .contentType(ContentType.JSON)
+		    .body(PayloadManager.loginPayload()).
+		when()
+		    .post(EndPoint.LOGIN).
+		Then()
+		    .statusCode(201);	
+	}
+}

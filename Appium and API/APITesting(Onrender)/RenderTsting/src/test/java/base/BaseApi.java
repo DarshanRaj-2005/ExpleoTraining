@@ -1,0 +1,12 @@
+package base;
+
+import org.testng.annotations.BeforeClass;
+import io.restassured.RestAssured;
+
+public class BaseApi {
+	
+	@BeforeClass
+	public void baseurl() {
+		RestAssured.baseURI = "https://lms-server-3-wedg.onrender.com";
+	}
+}

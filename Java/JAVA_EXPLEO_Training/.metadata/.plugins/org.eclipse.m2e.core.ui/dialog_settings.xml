@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="MavenProjectWizardLocationPage">
+		<list key="location">
+			<item value="C:\Users\dhars\Documents\JAVA_EXPLEO_Training\maven projects"/>
+			<item value="C:\Users\dhars\Documents\JAVA_EXPLEO_Training"/>
+			<item value="C:\Users\dhars\Documents\JAVA_EXPLEO_Training\EXPLEO_TRAINING\src\crud_demo"/>
+			<item value="C:\Users\dhars\Documents\JAVA_EXPLEO_Training\EXPLEO_TRAINING\src"/>
+			<item value="C:\Users\dhars\Documents\A_Testing_Training_Notes\Online Ticket Booking Project"/>
+			<item value="C:\Users\dhars\Documents\JAVA_EXPLEO_Training\demoproject1\src\main\java\com\expleo\demoproject1\App.java"/>
+			<item value="C:\Users\dhars\Documents\JAVA_EXPLEO_Training\demoproject1"/>
+			<item value="C:\Users\dhars\Documents\JAVA_EXPLEO_Training\EXPLEO_TRAINING"/>
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+	</section>
+	<section name="MavenProjectWizardArchetypePage">
+		<item key="catalog" value="internal"/>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+	</section>
+	<section name="Maven2ProjectWizardArchifactPage">
+		<list key="package">
+			<item value="com.expleo.SeleniumBasics"/>
+			<item value="com.kiot.crud_demo"/>
+			<item value="com.kiot"/>
+			<item value="org.expleo.TicketBookingJavaProject"/>
+			<item value="org.expleo.TicketBookingSystem"/>
+			<item value="org.expleo.OnlineTicketBookingProject"/>
+		</list>
+		<list key="groupId">
+			<item value="com.expleo"/>
+			<item value="com.kiot"/>
+			<item value="org.expleo"/>
+		</list>
+		<list key="artifactId">
+			<item value="SeleniumBasics"/>
+			<item value="crud-demo"/>
+			<item value="crud_demo"/>
+			<item value="TicketBookingJavaProject"/>
+			<item value="TicketBookingSystem"/>
+			<item value="OnlineTicketBookingProject"/>
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+		<list key="version">
+			<item value="0.0.1-SNAPSHOT"/>
+		</list>
+	</section>
+	<section name="MavenProjectWizardArtifactPage">
+		<list key="groupId">
+		</list>
+		<list key="name">
+		</list>
+		<list key="artifactId">
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+		<list key="version">
+			<item value="0.0.1-SNAPSHOT"/>
+		</list>
+	</section>
+	<section name="org.eclipse.m2e.core.ui.internal.wizards.CustomArchetypeDialog">
+	</section>
+	<section name="org.eclipse.m2e.core.pom.overview">
+	</section>
+	<section name="org.eclipse.m2e.core.pom.dependencies">
+	</section>
+</section>

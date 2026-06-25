@@ -1,0 +1,8 @@
+package endPoint;
+
+public class EndPoint {
+	
+	public static final String LOGIN = "/Login";
+	public static final String USER = "/users";
+	
+}

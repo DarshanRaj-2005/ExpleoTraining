@@ -1,0 +1,18 @@
+# Java
+bin/
+target/
+*.class
+
+# Eclipse
+.metadata/
+
+# TestNG
+test-output/
+
+# Node
+node_modules/
+
+# Playwright
+playwright-report/
+allure-results/
+allure-report/
