@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Rename compilation unit &apos;org.expleo.TicketBookingJavaProject.controller.authController.java&apos; to &apos;AuthController.java&apos;&#x0D;&#x0A;- Original project: &apos;TicketBookingJavaProject&apos;&#x0D;&#x0A;- Original element: &apos;org.expleo.TicketBookingJavaProject.controller.authController.java&apos;&#x0D;&#x0A;- Renamed element: &apos;org.expleo.TicketBookingJavaProject.controller.AuthController.java&apos;" description="Rename compilation unit &apos;authController.java&apos;" flags="2" id="org.eclipse.jdt.ui.rename.compilationunit" input="/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;org.expleo.TicketBookingJavaProject.controller{authController.java" name="AuthController.java" references="false" stamp="1774783140659" version="1.0"/>
-</session>
