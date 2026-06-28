@@ -1,0 +1,7 @@
+Message Before Adding:  Promise {
+  <pending>,
+  [Symbol(async_id_symbol)]: 2450,
+  [Symbol(trigger_async_id_symbol)]: 2449,
+  [Symbol(kResourceStore)]: undefined
+}
+Placeholder text: Please enter your Message
