@@ -1,0 +1,90 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: MouseAndKeyboardActions.test.ts >> Right Click
+- Location: tests\MouseAndKeyboardActions.test.ts:21:5
+
+# Error details
+
+```
+Error: locator.click: Error: strict mode violation: locator('button') resolved to 13 elements:
+    1) <button type="button" value="LogIn"> LogIn </button> aka getByRole('button', { name: 'LogIn', exact: true })
+    2) <button id="but2" type="button" contenteditable="true">Button2</button> aka getByRole('button', { name: 'Button2' })
+    3) <button disabled id="but1" type="button">Button1</button> aka getByRole('button', { name: 'Button1' })
+    4) <button type="button" name="samename">Submit</button> aka getByRole('button', { name: 'Submit' })
+    5) <button type="button" name="samename">Login</button> aka locator('#HTML10').getByRole('button', { name: 'Login' })
+    6) <button type="button" name="samename">Register</button> aka getByRole('button', { name: 'Register' })
+    7) <button id="myBtn">My Button</button> aka getByRole('button', { name: 'My Button' })
+    8) <button onclick="setTimeout(myFunctionABC,3000)">Try it</button> aka getByRole('button', { name: 'Try it' })
+    9) <button id="button9" type="button">Button X</button> aka getByRole('button', { name: 'Button X' })
+    10) <button id="button9" type="button">Button Y</button> aka getByRole('button', { name: 'Button Y' })
+    ...
+
+Call log:
+  - waiting for locator('button')
+
+```
+
+# Test source
+
+```ts
+  1  | import { test, expect } from "@playwright/test";
+  2  | 
+  3  | test.beforeEach(async ({ page }) => {
+  4  |     await page.goto("https://omayo.blogspot.com/");
+  5  | });
+  6  | 
+  7  | test.afterEach(async ({ page }) => {
+  8  |     await page.close();
+  9  | });
+  10 | 
+  11 | test("Hover Action", async ({ page }) => {
+  12 |     await page.locator("//span[text()='Blogs']").hover();
+  13 |     await page.waitForTimeout(3000);
+  14 | });
+  15 | 
+  16 | test("Double Click", async ({ page }) => {
+  17 |     await page.locator("button").dblclick();
+  18 |     await page.waitForTimeout(3000);
+  19 | });
+  20 | 
+  21 | test("Right Click", async ({ page }) => {
+> 22 |     await page.locator("button").click({
+     |                                  ^ Error: locator.click: Error: strict mode violation: locator('button') resolved to 13 elements:
+  23 |         button: "right"
+  24 |     });
+  25 |     await page.waitForTimeout(3000);
+  26 | });
+  27 | 
+  28 | 
+  29 | test("Drag and Drop", async ({ page }) => {
+  30 |     const source = page.locator("#draggable");
+  31 |     const target = page.locator("#droppable");
+  32 |     await source.dragTo(target);
+  33 |     await expect(target).toContainText("Dropped!");
+  34 |     await page.waitForTimeout(3000);
+  35 | });
+  36 | 
+  37 | 
+  38 | test("Keyboard Type", async ({ page }) => {
+  39 |     await page.locator("#ta1").click();
+  40 |     await page.keyboard.type("Hello Playwright");
+  41 |     await expect(page.locator("#ta1")).toHaveValue("Hello Playwright");
+  42 |     await page.waitForTimeout(3000);
+  43 | });
+  44 | 
+  45 | 
+  46 | test("Press Enter", async ({ page }) => {
+  47 |     await page.locator("#ta1").click();
+  48 |     await page.keyboard.type("Playwright");
+  49 |     await page.keyboard.press("Enter");
+  50 |     await page.keyboard.type("Automation");
+  51 |     await expect(page.locator("#ta1")).toHaveValue("Playwright Automation");
+  52 |     await page.waitForTimeout(3000);
+  53 | });
+```
