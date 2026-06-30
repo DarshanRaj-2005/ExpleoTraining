@@ -1,0 +1,16 @@
+[
+    {
+        "testName":"Valid Login",
+        "username" : "DarshanRaj",
+        "password" : "dharshan123",
+        "expectResult" : "Success",
+        "expectMessage" : "Welcome DarshanRaj"
+    },
+    {
+        "testName":"Invalid Login",
+        "username" : "DarshanRaj",
+        "password" : "dharshan",
+        "expectResult" : "Failure",
+        "expectMessage" : "Wrong password."
+    }
+]
