@@ -1,0 +1,26 @@
+count = 0
+total = 0
+
+minimum = 100
+maximum = 0
+
+while True:
+
+    num = int(input())
+
+    if num == -1:
+        break
+
+    if num < minimum:
+        minimum = num
+
+    if num > maximum:
+        maximum = num
+
+    if num >= 5 and num <= 30:
+        total = total + num
+        count = count + 1
+
+average = total // count
+
+print(maximum, minimum, average)

@@ -1,0 +1,27 @@
+import pytest
+from selenium import webdriver
+from selenium.webdriver.support.wait import WebDriverWait
+
+@pytest.fixture(params=["chrome"])
+def setUp(request):
+    if request.param == "chrome":
+        driver = webdriver.Chrome()
+    
+    elif request.param == "firefox":
+        driver = webdriver.Firefox()
+    
+    elif request.param == "edge":
+        driver = webdriver.Edge()
+
+    driver.maximize_window()
+    driver.implicitly_wait(5)
+    driver.get("https://tutorialsninja.com/demo/")
+    
+    wait = WebDriverWait(driver, 30)
+    request.cls.driver = driver
+    request.cls.wait = wait
+    yield 
+    driver.quit()
+
+
+    

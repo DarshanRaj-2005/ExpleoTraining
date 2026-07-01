@@ -1,0 +1,7 @@
+num = input("Enter a 5 digit number: ")
+
+if len(num) == 5:
+    reverse = num[::-1]
+    print(reverse)
+else:
+    print("Not a valid number")
