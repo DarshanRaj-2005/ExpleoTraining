@@ -1,10 +1,10 @@
 {
-    "validData": {
+    "validData":{
         "username" : "DarshanRaj",
         "password" : "dharshan123",
         "message" : "Welcome DarshanRaj"
     },
-    "invalidData": {
+    "invalidData":{
         "username" : "DarshanRaj",
         "password" : "dharshan123",
         "errmessage" : "Wrong password."

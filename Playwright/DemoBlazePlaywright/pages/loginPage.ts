@@ -14,15 +14,9 @@ export class LoginPage {
         this.loginBtn = page.locator("//button[text()='Log in']")
     }
 
-    async login() {
-        await this.username.fill(LoginData.validData.username)
-        await this.password.fill(LoginData.validData.password)
-        await this.loginBtn.click()
-    }
-
-    async invalidLogin() {
-        await this.username.fill(LoginData.invalidData.username)
-        await this.password.fill(LoginData.invalidData.password)
+    async login(username: string, password: string) {
+        await this.username.fill(username)
+        await this.password.fill(password)
         await this.loginBtn.click()
     }
 }

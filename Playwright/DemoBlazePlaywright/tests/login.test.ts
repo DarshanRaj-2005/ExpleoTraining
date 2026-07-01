@@ -1,6 +1,5 @@
 import {test,expect} from "../fixtures/baseFixtures"
-import LoginData from "../test-data/loginData.json"
-
+import loginData from "../test-data/loginData.json"
 
 test.describe("Login Test" , ()=> {
 
@@ -10,16 +9,20 @@ test.describe("Login Test" , ()=> {
 
     test("ValidLogin",async({homePage,loginPage}) => {
         await homePage.loginLink.click()
-        await loginPage.login()
-        await expect(homePage.welcome).toHaveText(LoginData.validData.message)
+        if(loginData.validData){
+            await loginPage.login(loginData.validData.username,loginData.validData.password)
+        }
+        await expect(homePage.welcome).toHaveText(loginData.validData.message)
     })
 
     test("InvalidLogin",async({homePage,loginPage,page}) => {
         await homePage.loginLink.click()
         page.on("dialog",async dialog => {
-            expect(dialog.message).toBe("Wrong password.")
+            await expect(dialog.message).toBe("Wrong password.")
             dialog.accept()
         })
-        await loginPage.invalidLogin()
+        if(loginData.invalidData){
+            await loginPage.login(loginData.invalidData.username,loginData.invalidData.password)
+        }
     })
 })

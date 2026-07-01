@@ -1,5 +1,5 @@
 {
-  "name": "demoblazeplaywright",
+  "name": "autoexerciseplaywright",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -10,9 +10,7 @@
   "type": "commonjs",
   "devDependencies": {
     "@playwright/test": "^1.61.1",
-    "@types/node": "^26.0.1",
-    "allure": "^3.14.0",
-    "allure-playwright": "^3.10.2"
+    "@types/node": "^26.0.1"
   },
   "dependencies": {
     "csv-parse": "^7.0.0",
