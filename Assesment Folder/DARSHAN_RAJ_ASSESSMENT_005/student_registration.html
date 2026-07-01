@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        Student Registration
+    </title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <h1>Student Registration Form</h1>
+        <p>These form is for getting the details of the student to register about them</p>
+    </header>
+
+    <main>
+        <section>
+
+
+            <form onsubmit="return validate()">
+                <label for="fullname">Full Name:</label>
+                <input type="text" id="fullname" placeholder="Enter your Name">
+                <p id="error-fullname" class="errorpara"></p>
+
+                <label for="email">Email:</label>
+                <input type="text" id="email" placeholder="Enter your Email">
+                <p id="error-email" class="errorpara"></p>
+
+                <label for="date">Date of Birth:</label>
+                <input type="date" id="date" name="Date">
+                <p id="error-date" class="errorpara"></p>
+
+                <div class="radio-group">
+                    <label>Gender:</label>
+                    <div class="radio-buttons">
+                        <input type="radio" name="gender" value="male">
+                        <label>Male</label>
+                        <input type="radio" value="female" name="gender">
+                        <label>Female</label>
+                        <input type="radio" value="other" name="gender">
+                        <label>Other</label>
+                    </div>
+                </div>
+
+                <div class="radio-group">
+                    <label>Languages Known:</label>
+                    <div class="radio-buttons">
+                        <input type="checkbox" value="English">
+                        <label>English</label>
+                        <input type="checkbox" value="Tamil">
+                        <label>Tamil</label>
+                    </div>
+                </div>
+                <label for="course">Course:</label>
+                <select id="course" name="course">
+                    <option value="">Select Course</option>
+                    <option value="B.E">B.E</option>
+                    <option value="M.E">M.E</option>
+                    <option value="MBA">MBA</option>
+                    <option value="MCA">MCA</option>
+                </select>
+                <p id="error-course" class="errorpara"></p>
+                <button type="submit" onclick="validate()">Submit</button>
+            </form>
+        </section>
+
+        <details>
+            <summary>Campus Facilities</summary>
+            <ul>
+                <li>Hostel Available</li>
+                <li>Department Idea Labs</li>
+                <li>AC Class Rooms</li>
+            </ul>
+        </details>
+    </main>
+
+    <footer>
+        <h3>Darshan Raj J</h3>
+        <h3>Computer Science And Engineering</h3>
+    </footer>
+</body>
+
+</html>

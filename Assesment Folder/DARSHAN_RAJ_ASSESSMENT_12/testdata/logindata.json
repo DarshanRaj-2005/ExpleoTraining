@@ -1,0 +1,14 @@
+{
+    "valid": {
+    "email": "darshanraj10@gmail.com",
+    "password" : "1234"
+    },
+    "incorrectemail" : {
+        "email" : "darhan@gmail.com",
+        "password" : "1234"
+    },
+    "incorrectpassword": {
+        "email" : "darshanraj10@gmail.com",
+        "password" : "123"
+    }
+}
