@@ -19,7 +19,7 @@
     "*.ts",
     "playwright.config.ts",
     "tests/**/*.ts"
-  ],
+, "TypescriptProbs/Prob01.ts", "TypescriptProbs/Prob02.ts"  ],
   "exclude": [
     "node_modules"
   ]
