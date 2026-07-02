@@ -15,9 +15,9 @@ After(async function({pickle,result}) {
         const img = await this.page.screenshot({path:`./screenshots/${pickle.name}.png`,type:"png"})
         await this.attach(img,"image/png")
     }
-    await this.broswer.close()
-    await this.page.close()
-    await this.context.close()
+    await this.page?.close();
+    await this.context?.close();
+    await this.browser?.close();
 })
 
 // let browser : Browser
