@@ -1,5 +1,3 @@
-const { format } = require("node:path");
-
 module.exports = {
     default : {
         "formatOptions" : {

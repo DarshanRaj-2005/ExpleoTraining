@@ -1,1438 +1,465 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <!-- Meta, title, CSS, favicons, etc. -->
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta http-equiv="Cache-control" content="public">
-        <title>BookCart App Test Report</title>
-        
-            <script src="assets/js/darkmode.js"></script>
-            <!-- Bootstrap -->
-            <link rel="stylesheet" href="assets/css/bootstrap.min.css" >
-            <link rel="stylesheet" href="assets/css/dataTables.bootstrap.min.css" >
-            <link rel="stylesheet" href="assets/css/responsive.bootstrap5.min.css" >
-
-            <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-            <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-
-            <!--[if lt IE 9]>
-            <script src="assets/js/html5shiv.min.js"></script>
-            <script src="assets/js/respond.min.js"></script>
-            <![endif]-->
-            <link href="assets/css/font-awesome.min.css" rel="stylesheet">
-        
-
-        <!-- Custom Theme Style -->
-        <style type="text/css">
-            body {
-  color: #73879c;
-  background: #f7f7f7;
-  font-family: "Helvetica Neue", Roboto, Arial, "Droid Sans", sans-serif;
-  font-size: 13px;
-  font-weight: 400;
-  line-height: 1.471;
-}
-
-.main_container {
-  padding: 10px 20px 0;
-}
-
-i span {
-  display: none;
-}
-
-/* Navigation */
-nav.navbar {
-  background: #ededed;
-  border-bottom: 1px solid #d9dee4;
-  margin-bottom: 0;
-}
-
-nav .navbar-brand {
-  border-right: 1px solid #d9dee4;
-  color: #5a738e;
-}
-
-nav .navbar-text {
-  font-size: 18px;
-  height: 50px;
-  margin-bottom: 0;
-  margin-top: 0;
-  padding: 15px 0;
-  float: right;
-}
-
-/* Table */
-table {
-  width: 100%;
-}
-
-table.chart tr th:first-of-type {
-  width: 33.333%;
-}
-
-.table > thead > tr > th {
-  background: #f5f7fa;
-}
-
-table.tile h3,
-table.tile h4,
-table.tile span {
-  font-weight: bold;
-  vertical-align: middle !important;
-}
-
-table.tile th,
-table.tile td {
-  text-align: center;
-}
-
-table.tile th {
-  border-bottom: 1px solid #e6ecee;
-}
-
-table.tile td {
-  padding: 5px 0;
-}
-
-table.tile td ul {
-  text-align: left;
-  padding-left: 0;
-}
-
-table.tile td ul li {
-  list-style: none;
-  width: 100%;
-}
-
-table.tile td ul li a {
-  width: 100%;
-}
-
-table.tile td ul li a big {
-  right: 0;
-  float: right;
-  margin-right: 13px;
-}
-
-table.tile_info {
-  width: 100%;
-}
-
-table.tile_info td {
-  text-align: left;
-  padding: 1px;
-  font-size: 15px;
-}
-
-table.tile_info td p {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  margin: 0;
-  line-height: 28px;
-}
-
-table.tile_info td i {
-  display: inline-block;
-  margin-right: 8px;
-  font-size: 17px;
-  float: left;
-  width: 18px;
-  line-height: 28px;
-  text-align: center;
-}
-
-table.tile_info td:first-child {
-  width: 65%;
-}
-
-td span {
-  line-height: 28px;
-}
-
-table.tile_info td.percentage {
-  text-align: right;
-}
-
-/* chart in table */
-table td.chart {
-  display: inline-block;
-  position: relative;
-}
-
-table td.chart #feature-chart,
-table td.chart #scenario-chart,
-table td.chart .total {
-  height: 140px;
-  margin: 15px 10px 10px 0;
-  width: 140px;
-}
-
-table td.chart .total {
-  display: inline-block;
-  position: absolute;
-  font-size: 2em;
-  height: 50px;
-  line-height: 50px;
-  top: 45px;
-  left: 45px;
-  text-align: center;
-  vertical-align: middle;
-  width: 50px;
-}
-
-/* colors */
-.ambiguous-color {
-  color: #e74c3c !important;
-}
-
-.failed-color {
-  color: #e74c3c !important;
-}
-
-.not-defined-color {
-  color: #f39c12 !important;
-}
-
-.passed-color {
-  color: #1abb9c !important;
-}
-
-.pending-color {
-  color: #ffd119 !important;
-}
-
-.skipped-color {
-  color: #3498db !important;
-}
-
-/* backgrounds */
-.ambiguous-background {
-  background: #b73122 !important;
-}
-
-.failed-background {
-  background: #e74c3c !important;
-}
-
-.not-defined-background {
-  background: #f39c12 !important;
-}
-
-.passed-background {
-  background: #1abb9c !important;
-}
-
-.pending-background {
-  background: #ffd119 !important;
-}
-
-.skipped-background {
-  background: #3498db !important;
-}
-
-/* general */
-.x_panel {
-  position: relative;
-  width: 100%;
-  margin-bottom: 10px;
-  padding: 10px 17px;
-  display: inline-block;
-  background: #fff;
-  border: 1px solid #e6e9ed;
-  -webkit-column-break-inside: avoid;
-  opacity: 1;
-}
-
-.x_title {
-  border-bottom: 2px solid #e6e9ed;
-  padding: 1px 5px 6px;
-  margin-bottom: 10px;
-}
-
-.x_title .filter {
-  width: 40%;
-  float: right;
-}
-
-.x_title h2 {
-  margin: 5px 0 6px;
-  float: left;
-  font-size: 24px;
-  font-weight: 400;
-  display: block;
-  text-overflow: ellipsis;
-  overflow: hidden;
-  white-space: nowrap;
-}
-
-.fixed_height_320 {
-  height: 320px;
-}
-
-.x_title span {
-  color: #bdbdbd;
-}
-
-.x_content {
-  padding: 0 5px 6px;
-  position: relative;
-  width: 100%;
-  float: left;
-  clear: both;
-  margin-top: 5px;
-}
-
-.x_content h4 {
-  font-size: 16px;
-  font-weight: 500;
-}
-
-.panel_toolbox {
-  float: right;
-  margin: 5px 0 0;
-  min-width: 70px;
-}
-
-.panel_toolbox > li {
-  float: right;
-}
-
-.panel_toolbox > li > a {
-  cursor: pointer;
-}
-
-.panel_toolbox > li > a {
-  padding: 5px;
-  color: #c5c7cb;
-  font-size: 14px;
-}
-
-.panel_toolbox > li > a:hover {
-  background: #f5f7fa;
-}
-
-.page-title {
-  width: 100%;
-  padding: 10px 0 30px 0;
-}
-
-.page-title {
-  display: block;
-}
-
-.page-title h1 {
-  margin: 9px 0 9px 13px;
-  font-size: 30px;
-}
-
-.page-title .title_right {
-  width: 55%;
-  float: left;
-  display: block;
-}
-
-.page-title .title_right .pull-right {
-  margin: 10px 0;
-}
-
-.page-title p {
-  margin-left: 15px;
-}
-
-.dashboard-widget-content {
-  padding-top: 9px;
-}
-
-.dashboard-widget-content .sidebar-widget {
-  width: 50%;
-  display: inline-block;
-  vertical-align: top;
-  background: #fff;
-  border: 1px solid #abd9ea;
-  border-radius: 5px;
-  text-align: center;
-  float: right;
-  padding: 2px;
-  margin-top: 10px;
-}
-
-ul.quick-list {
-  padding-left: 0;
-  display: inline-block;
-}
-
-ul.quick-list li,
-table.quick-list tr {
-  padding-left: 10px;
-  list-style: none;
-  margin: 0;
-  padding-bottom: 6px;
-  padding-top: 4px;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
-}
-
-ul.quick-list li .meta-data-title,
-table.quick-list td.meta-data-title {
-  display: inline-block;
-  min-width: 75px;
-  font-weight: bold;
-}
-
-ul.quick-list li span,
-table.quick-list td {
-  line-height: 28px;
-}
-
-ul.quick-list li,
-table.quick-list tr {
-  border-bottom: 1px solid #efefef;
-  padding: 0.5em 0;
-}
-
-ul.quick-list li:last-child,
-table.quick-list tr:last-child {
-  border-bottom: none;
-}
-
-ul.quick-list li i {
-  padding-right: 10px;
-  color: #757679;
-}
-
-.screenshot {
-  max-height: 100%;
-  max-width: 100%;
-}
-
-.videoCapture {
-  width: 50%;
-  height: 50%;
-  max-height: 100%;
-  max-width: 100%;
-}
-
-/* Features / Scenarios */
-ul.panel_toolbox li .step {
-  border-radius: 50%;
-  color: #ffffff;
-  display: block;
-  font-size: 14px;
-  height: 30px;
-  margin-right: 5px;
-  padding: 5px;
-  text-align: center;
-  width: 30px;
-}
-
-.scenario-step-container {
-  margin-bottom: 10px;
-}
-
-.scenario-step-container .label {
-  display: inline-block;
-  text-align: center;
-  width: 30px;
-}
-
-.scenario-step-container .text {
-  display: inline;
-}
-
-.scenario-step-container .duration {
-  position: relative;
-  float: right;
-}
-
-.scenario-step-container .text .keyword.highlight {
-  font-size: 1.2em;
-  font-weight: 700;
-}
-
-.scenario-scroll-bar {
-  overflow-x: scroll;
-}
-
-.scenario-step-collapse,
-.scenario-scroll-bar .arguments {
-  margin-left: 30px;
-  width: auto;
-}
-
-/* media */
-@media (max-width: 1200px) {
-  .x_title h2 {
-    width: 70%;
-  }
-}
-
-@media (max-width: 640px) {
-  .x_title h2 {
-    width: 100%;
-  }
-}
-
-/* override */
-table.dataTable.dtr-inline.collapsed > tbody > tr > td:first-child:before,
-table.dataTable.dtr-inline.collapsed > tbody > tr > th:first-child:before {
-  background: #1abb9c;
-}
-
-table.dataTable.dtr-inline.collapsed
-  > tbody
-  > tr.parent
-  > td:first-child:before,
-table.dataTable.dtr-inline.collapsed
-  > tbody
-  > tr.parent
-  > th:first-child:before {
-  background: #e74c3c;
-}
-
-.created-by {
-  padding: 50px 0;
-  text-align: center;
-}
-
-body.darkmode,
-body.darkmode div.created-by,
-body.darkmode .dropdown-menu {
-  background: #212121 !important;
-  color: #b4bfca;
-  border-color: #2e2e2e;
-}
-
-body.darkmode .x_panel {
-  background: #1c1c21 !important;
-  color: #b4bfca;
-  border: 1px solid #2e2e2e;
-}
-
-body.darkmode div.container-fluid {
-  background: #2b2b2b !important;
-  color: #b4bfca;
-  border: 0 solid #2e2e2e;
-}
-
-body.darkmode nav.navbar {
-  background: #2b2b2b;
-  border-bottom: 1px solid #313a45;
-  margin-bottom: 0;
-}
-
-body.darkmode .x_title {
-  background: #1c1c21 !important;
-  border-bottom: 2px solid #2e2e2e;
-  padding: 1px 5px 6px;
-  margin-bottom: 10px;
-}
-
-body.darkmode table.quick-list tr {
-  border-bottom: 1px solid #292929;
-  padding: 0.5em 0;
-}
-
-body.darkmode ul.quick-list li,
-body.darkmode table.quick-list tr {
-  border-bottom: 1px solid #2e2e2e;
-  padding: 0.5em 0;
-}
-
-.darkModeIcon {
-  font-size: x-large;
-  float: left;
-  padding-top: 12px;
-  padding-left: 4px;
-  cursor: pointer;
-  color: #b4bfca;
-  border-color: #2e2e2e;
-}
-
-.darkModeIcon:before {
-  content: "";
-}
-
-body.darkmode a.navbar-default,
-body.darkmode a.navbar-brand {
-  color: #b1bfcd;
-  background: transparent !important;
-  border-right: 1px solid #313a45;
-}
-
-body.darkmode a {
-  background: transparent !important;
-  color: #9cc2e3;
-  border-color: #2e2e2e;
-}
-
-body.darkmode a.collapse-link {
-  color: #c7c7c7;
-  border-color: #2e2e2e;
-}
-
-body.darkmode li:not([class]) > a[id] {
-  color: white;
-}
-body.darkmode li:not([class]) > a[id]:hover {
-  background: darkslateblue;
-}
-
-body.darkmode #features-table {
-  color: #b4bfca;
-  border-color: #2e2e2e;
-}
-
-body.darkmode #features-table th {
-  background: #212121 !important;
-  color: #a3c2db;
-  border-color: #2e2e2e;
-}
-
-body.darkmode #features-table td {
-  border-color: #2e2e2e;
-}
-
-body.darkmode #features-table tr:nth-of-type(odd) {
-  background: #212121 !important;
-  border-color: #2e2e2e;
-}
-
-body.darkmode table.dataTable > tbody > tr.child ul.dtr-details li {
-  border-bottom: 1px solid #2e2e2e;
-  padding: 0.5em 0;
-}
-
-body.darkmode .pagination,
-body.darkmode .pagination > .active > a,
-body.darkmode .pagination > .active > a:focus,
-body.darkmode .pagination > .active > a:hover,
-body.darkmode .pagination > .active > span,
-body.darkmode .pagination > .active > span:focus,
-body.darkmode .pagination > .active > span:hover {
-  background: #3a7ab7;
-  border-color: #3a7ab7;
-}
-
-body.darkmode .pagination > .disabled > a,
-body.darkmode .pagination > .disabled > a:focus,
-body.darkmode .pagination > .disabled > a:hover,
-body.darkmode .pagination > .disabled > span,
-body.darkmode .pagination > .disabled > span:focus,
-body.darkmode .pagination > .disabled > span:hover {
-  background: #3a7ab7;
-  border-color: #3b3b3b;
-  color: #bfbfbf;
-}
-
-body.darkmode
-  table.dataTable.dtr-inline.collapsed
-  > tbody
-  > tr
-  > td:first-child::before,
-table.dataTable.dtr-inline.collapsed > tbody > tr > th:first-child::before {
-  border: 1px solid #2e2e2e;
-}
-
-body.darkmode #features-table > thead > tr {
-  color: #b4bfca;
-  border-color: #2e2e2e;
-}
-
-body.darkmode .form-control {
-  background: #212121 !important;
-  color: #c3c3c3;
-  border-color: #2e2e2e;
-}
-body.darkmode li[id*="features"] > a {
-  background: #212121 !important;
-}
-
-body.darkmode .btn-info {
-  color: #b4bfca;
-  background: #337ab7;
-  border-color: #337ab7;
-}
-
-body.darkmode .panel_toolbox > li > a:hover {
-  background: transparent;
-}
-
-body.darkmode .table-striped > tbody > tr:nth-of-type(even) {
-  background: #1c1c21;
-}
-
-body.darkmode div pre {
-  background: #212121 !important;
-  color: #b4bfca;
-}
-
-body.darkmode span.tag {
-  color: #b4bfca;
-}
-
-body.darkmode .keyword {
-  color: #b4bfca;
-}
-
-body.darkmode div.tags ~ h1 {
-  color: #b4bfca;
-}
-
-body.darkmode div.tags ~ h2 {
-  color: #b4bfca;
-}
-
-body.darkmode div.tags ~ h1 small {
-  color: #bfbfbf;
-}
-
-body.darkmode div.tags ~ h2 small {
-  color: #bfbfbf;
-}
-
-svg#moon,
-svg#sun {
-  width: 40px;
-  height: 30px;
-  fill: #ec6d04;
-}
-
-input#darkCheck:checked ~ label > svg#sun {
-  display: none;
-  border-color: #212121;
-}
-
-label > svg#moon {
-  display: none;
-}
-
-input#darkCheck:checked ~ label > svg#moon {
-  display: inline-block;
-  fill: #b4bfca;
-  border-color: #212121;
-}
-
-.chart-header-flex {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  padding: 0 10px;
-}
-
-body.darkmode .x_content,
-body.darkmode .table,
-body.darkmode .chart,
-body.darkmode .tile_info,
-body.darkmode .table-bordered,
-body.darkmode .table-responsive,
-body.darkmode .dataTables_wrapper {
-  background: #1c1c21 !important;
-  color: #b4bfca !important;
-  border-color: #2e2e2e !important;
-}
-
-body.darkmode .table th,
-body.darkmode .table td {
-  background: #212121 !important;
-  color: #b4bfca !important;
-  border-color: #2e2e2e !important;
-}
-
-body.darkmode .x_panel {
-  background: #1c1c21 !important;
-  color: #b4bfca !important;
-  border: 1px solid #2e2e2e !important;
-}
-
-body.darkmode .chart-header-flex span {
-  color: #b4bfca;
-}
-
-body.darkmode .darkModeIcon {
-  color: #b4bfca;
-}
-
-body.darkmode label > svg#moon {
-  fill: #b4bfca;
-}
-
-body.darkmode label > svg#sun {
-  fill: #ec6d04;
-}
-
-@media (max-width: 640px) {
-  .chart-header-flex {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 4px;
-  }
-}
-
-body.darkmode .dataTables_wrapper .dataTables_paginate .pagination,
-body.darkmode .pagination {
-  background: #1c1c21 !important;
-  color: #b4bfca !important;
-  border-color: #2e2e2e !important;
-}
-body.darkmode .pagination .page-link,
-body.darkmode .pagination .page-item {
-  background: #212121 !important;
-  color: #b4bfca !important;
-  border-color: #2e2e2e !important;
-}
-body.darkmode .pagination .page-link.active,
-body.darkmode .pagination .active > .page-link {
-  background: #3a7ab7 !important;
-  color: #fff !important;
-  border-color: #3a7ab7 !important;
-}
-body.darkmode .pagination .page-link:focus,
-body.darkmode .pagination .page-link:hover {
-  background: #313a45 !important;
-  color: #fff !important;
-  border-color: #3a7ab7 !important;
-}
-body.darkmode .dataTables_length label,
-body.darkmode .dataTables_length select,
-body.darkmode .dataTables_filter label,
-body.darkmode .dataTables_filter input {
-  background: #212121 !important;
-  color: #b4bfca !important;
-  border-color: #2e2e2e !important;
-}
-body.darkmode .dataTables_length select,
-body.darkmode .form-select {
-  background: #212121 !important;
-  color: #b4bfca !important;
-  border-color: #2e2e2e !important;
-}
-body.darkmode .x_title,
-body.darkmode .navbar-text {
-  background: #1c1c21 !important;
-  color: #b4bfca !important;
-}
-
-            
-        </style>
-    </head>
-    <body>
-        <nav class="navbar">
-            <div class="container-fluid">
-                <p class="navbar-text" style="float: left">Dashboard</p>
-                <input id="darkCheck" type="checkbox" hidden onchange="applyDarkMode(); saveState()"></input>
-                <label title="Darkmode" id=darkmodeicon for="darkCheck" class="darkModeIcon">
-                    <svg id="moon" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" clip-rule="evenodd" viewBox="0 0 512 262.86"><path fill-rule="nonzero" d="M316.78 16.55h-205.9c-30.5 0-58.22 12.48-78.31 32.57C12.47 69.21 0 96.93 0 127.44c0 30.5 12.47 58.22 32.57 78.31 20.09 20.1 47.81 32.57 78.31 32.57h193.25c21.54 15.43 47.9 24.54 76.26 24.54h.18c36.14 0 69.02-14.79 92.83-38.6 23.8-23.81 38.6-56.67 38.6-92.83 0-36.15-14.78-69.03-38.63-92.8C449.53 14.8 416.67 0 380.57 0h-.18c-23.02 0-44.72 6.02-63.61 16.55zm70.62 97.17.43.09c.82-3.45 2.83-6.19 6.04-8.16 3.2-1.98 6.53-2.57 10.01-1.75l.1-.43c-3.47-.82-6.2-2.83-8.17-6.03-1.98-3.22-2.57-6.55-1.75-10.01l-.43-.1c-.82 3.47-2.83 6.2-6.03 8.18-3.21 1.98-6.55 2.56-10.02 1.74l-.1.43c3.47.82 6.2 2.84 8.18 6.04 1.99 3.19 2.56 6.52 1.74 10zm36.87 16.77.53.12c1.02-4.35 3.55-7.78 7.58-10.26 4.02-2.49 8.2-3.22 12.56-2.19l.13-.53c-4.35-1.03-7.78-3.55-10.26-7.59-2.49-4.03-3.22-8.22-2.2-12.56l-.53-.12c-1.02 4.35-3.55 7.77-7.58 10.26-4.02 2.49-8.21 3.22-12.56 2.19l-.13.53c4.36 1.03 7.78 3.55 10.26 7.58 2.49 4.02 3.22 8.22 2.2 12.57zm-38.79-61.01c-15.69 7.67-26.98 23.26-28.29 41.93-1.96 27.88 19.05 52.06 46.92 54.02 13.23.93 25.64-3.32 35.22-11.02 4.75-3.82 9.66-.45 7.59 4.36-11.33 26.42-38.45 44.04-68.74 41.91-38.29-2.69-67.14-35.91-64.45-74.19C316.3 89.8 347.05 61.67 383.44 62c6.71.06 8.13 4.5 2.04 7.48zm-5.09-53.95h.18c63.75 0 115.91 52.15 115.91 115.9 0 63.75-52.23 115.91-115.91 115.91h-.18c-63.68 0-115.91-52.16-115.91-115.91s52.16-115.9 115.91-115.9z"/></svg>
-                    <svg id="sun" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" clip-rule="evenodd" viewBox="0 0 512 256.04"><path d="M128.02 0h.18c22.03 0 42.83 5.66 61 15.6h210.38c30.89 0 59 12.65 79.38 33.04C499.35 68.99 512 97.1 512 128.02c0 30.92-12.66 59.03-33.02 79.4l-.42.38c-20.34 20.15-48.29 32.64-78.98 32.64H189.24c-18.17 9.93-38.98 15.6-61.04 15.6h-.18c-35.2 0-67.22-14.41-90.42-37.6C14.41 195.25 0 163.24 0 128.02s14.4-67.24 37.59-90.43l.91-.83C61.65 14.05 93.29 0 128.02 0zm-5.95 54.42c0-1.95.8-3.73 2.08-5 2.74-2.77 7.27-2.76 10.02-.01l.14.16a7.042 7.042 0 0 1 1.94 4.85v12.95c0 1.95-.8 3.73-2.08 5.01-2.75 2.75-7.27 2.75-10.02 0a7.084 7.084 0 0 1-2.08-5.01V54.42zm6.05 31.17c11.72 0 22.32 4.75 30 12.43 7.67 7.68 12.43 18.29 12.43 30 0 11.72-4.75 22.32-12.43 30s-18.28 12.43-30 12.43c-11.72 0-22.32-4.75-30.01-12.43-7.67-7.68-12.43-18.28-12.43-30 0-11.72 4.76-22.32 12.43-30 7.69-7.67 18.3-12.43 30.01-12.43zm-56.33-5.34a7.114 7.114 0 0 1-2.07-5.01c0-3.9 3.18-7.09 7.09-7.09 1.81 0 3.62.69 5 2.07l9.16 9.16a7.065 7.065 0 0 1 2.08 5.01c0 1.8-.7 3.62-2.08 5.01a7.057 7.057 0 0 1-5.01 2.08c-1.8 0-3.61-.7-5-2.07l-9.17-9.16zm-17.28 53.81c-1.95 0-3.73-.8-5-2.08-2.77-2.74-2.76-7.27-.01-10.01l.15-.14a7.04 7.04 0 0 1 4.86-1.94h12.94a7.082 7.082 0 0 1 7.09 7.09c0 1.95-.8 3.73-2.07 5.01a7.099 7.099 0 0 1-5.02 2.07H54.51zm25.82 50.28a7.049 7.049 0 0 1-5 2.07c-3.91 0-7.09-3.16-7.09-7.08 0-1.81.68-3.62 2.07-5.01l9.31-9.29a7.02 7.02 0 0 1 4.86-1.94 7.09 7.09 0 0 1 7.09 7.09c0 1.79-.69 3.6-2.08 4.99l-9.16 9.17zm53.82 17.29c0 1.94-.8 3.73-2.08 5-2.74 2.76-7.27 2.75-10.02 0l-.13-.15a7.033 7.033 0 0 1-1.94-4.85v-12.95c0-1.96.8-3.73 2.07-5.01 2.76-2.75 7.27-2.75 10.03 0a7.1 7.1 0 0 1 2.07 5.01v12.95zm50.28-25.83a7.055 7.055 0 0 1 2.07 5.01c0 3.89-3.18 7.09-7.08 7.09-1.81 0-3.63-.69-5.01-2.07l-9.16-9.16a7.095 7.095 0 0 1-2.07-5.02c0-3.9 3.18-7.09 7.08-7.09 1.8 0 3.61.7 5 2.08l9.17 9.16zm17.29-53.82c1.93 0 3.73.81 5 2.08 2.76 2.75 2.75 7.27 0 10.02l-.15.14a7.098 7.098 0 0 1-4.85 1.94h-12.95c-1.96 0-3.74-.8-5.01-2.08-2.76-2.75-2.76-7.27 0-10.02a7.049 7.049 0 0 1 5.01-2.08h12.95zM175.89 71.7a7.074 7.074 0 0 1 5-2.07c3.9 0 7.1 3.19 7.1 7.09 0 1.81-.69 3.62-2.07 5l-9.32 9.31a7.12 7.12 0 0 1-4.86 1.93c-3.91 0-7.09-3.18-7.09-7.09 0-1.8.7-3.61 2.08-5l9.16-9.17zm34.17-41.87c2.96 2.47 5.81 5.07 8.53 7.8 23.22 23.15 37.63 55.17 37.63 90.39s-14.42 67.23-37.6 90.42a130.2 130.2 0 0 1-8.5 7.77h189.46c26.83 0 51.24-10.91 69.02-28.5l.32-.35c17.79-17.79 28.85-42.35 28.85-69.34 0-26.99-11.06-51.55-28.85-69.35-17.77-17.8-42.33-28.84-69.34-28.84H210.06zm-82.04-14.71h.18c62.09 0 112.89 50.81 112.89 112.9 0 62.1-50.86 112.9-112.89 112.9h-.18c-62.03 0-112.9-50.8-112.9-112.9 0-62.09 50.81-112.9 112.9-112.9z"/></svg>
-                </label>
-                <p class="navbar-text">Playwright BDD Report</p>
+<head>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BookCart App Test Report</title>
+<link rel="icon" type="image/x-icon" href="./assets/images/logo.png">
+<link rel="stylesheet" href="./styles.min.css">
+
+    <script src="./assets/js/apex-charts.js"></script>
+    <link rel="stylesheet" href="./assets/css/font-awesome.css">
+
+<style>
+    [v-cloak] { display: none; }
+</style>
+    <script>
+        (function() {
+            const theme = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+            if (theme === 'dark') document.documentElement.classList.add('dark');
+        })();
+    </script>
+</head>
+<body class="min-h-screen bg-background text-foreground">
+    <div class="w-full">
+        <!-- Header -->
+        <header class="border-b bg-background px-4 md:px-6 py-4 sticky top-0 z-40 backdrop-blur supports-backdrop-filter:bg-background/60">
+    <div class="mx-auto max-w-7xl flex items-center justify-between gap-4">
+        <div class="flex items-center gap-3 truncate">
+            <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-primary text-primary-foreground shadow-lg shadow-primary/20 overflow-hidden">
+                
+                    <i class="fa-solid fa-vial-circle-check text-xl"></i>
+                
             </div>
-        </nav>
+            <div class="text-balance">
+                <h1 class="text-lg md:text-2xl font-bold text-foreground text-balance tracking-tight">Playwright BDD Report</h1>
+                <p class="mt-0.5 text-[10px] md:text-xs text-muted-foreground uppercase font-bold tracking-widest opacity-70">Test Info</p>
+            </div>
+        </div>
+        <div class="flex items-center gap-2">
+            <button id="theme-toggle" class="p-2 rounded-md hover:bg-accent transition-colors shrink-0">
+                <svg id="sun-icon" class="hidden h-4 w-4 md:h-5 md:w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364-6.364l-.707.707M6.343 17.657l-.707.707m12.728 0l-.707-.707M6.343 6.343l-.707-.707M12 5a7 7 0 100 14 7 7 0 000-14z"/></svg>
+                <svg id="moon-icon" class="h-4 w-4 md:h-5 md:w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/></svg>
+            </button>
+        </div>
+    </div>
+</header>
 
-        <div class="main_container">
 
-            <div class="row">
-                <div class="col-md-6 col-lg-4 col-xs-12">
-                    <div class="x_panel fixed_height_320">
-                        <div class="x_title">
-    <h2>Features</h2>
-    <ul class="nav navbar-right panel_toolbox">
-        <li>
-            <a class="collapse-link">
-                <i class="fa fa-chevron-up"></i>
-            </a>
-        </li>
-    </ul>
-    <div class="clearfix"></div>
-</div>
-<div class="x_content">
-    <table class="chart">
-        <tr>
-            <th>
-                <p>Chart</p>
-            </th>
-            <th>
-                <div class="chart-header-flex">
-                    <span>Status</span>
-                    <span>Progress</span>
-                </div>
-            </th>
-        </tr>
-        <tr>
-            <td class="chart">
-                <canvas id="feature-chart"></canvas>
-                <div class="total">2</div>
-            </td>
-            <td>
-                <table class="tile_info">
-                    <tr>
-                        <td>
-                            <p data-bs-toggle="tooltip" data-placement="left" title="Features passed">
-                                <i class="fa fa-check-circle passed-color"></i>
-                                Passed
-                            </p>
-                        </td>
-                        <td class="percentage">50.00 %</td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <p data-bs-toggle="tooltip" data-placement="left" title="Features failed">
-                                <i class="fa fa-exclamation-circle failed-color"></i>
-                                Failed
-                            </p>
-                        </td>
-                        <td class="percentage">50.00 %</td>
-                    </tr>
-                    
-                    
-                    
-                    
-
-                </table>
-            </td>
-        </tr>
-    </table>
-</div>
-
-                    </div>
-                </div>
-
-                <div class="col-md-6 col-lg-4 col-xs-12">
-                    <div class="x_panel fixed_height_320">
-                        <div class="x_title">
-    <h2>Scenarios</h2>
-    <ul class="nav navbar-right panel_toolbox">
-        <li>
-            <a class="collapse-link">
-                <i class="fa fa-chevron-up"></i>
-            </a>
-        </li>
-    </ul>
-    <div class="clearfix"></div>
-</div>
-<div class="x_content">
-    <table class="chart">
-        <tr>
-            <th>
-                <p>Chart</p>
-            </th>
-            <th>
-                <div class="chart-header-flex">
-                    <span>Status</span>
-                    <span>Progress</span>
-                </div>
-            </th>
-        </tr>
-        <tr>
-            <td class="chart">
-                <canvas id="scenario-chart"></canvas>
-                <div class="total">3</div>
-            </td>
-            <td>
-                <table class="tile_info">
-                    <tr>
-                        <td>
-                            <p data-bs-toggle="tooltip" data-placement="left" title="Scenario passed">
-                                <i class="fa fa-check-circle passed-color"></i>
-                                Passed
-                            </p>
-                        </td>
-                        <td class="percentage">66.67 %</td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <p data-bs-toggle="tooltip" data-placement="left" title="Scenario failed">
-                                <i class="fa fa-exclamation-circle failed-color"></i>
-                                Failed
-                            </p>
-                        </td>
-                        <td class="percentage">33.33 %</td>
-                    
-                    
-                    </tr>
-                    
-                    
-                </table>
-            </td>
-        </tr>
-        
-    </table>
-</div>
-
-                    </div>
-                </div>
-
+        <!-- Main Content -->
+        <main class="space-y-6 px-6 py-8">
+            <div class="mx-auto max-w-7xl">
                 
-                <div class="col-lg-4 col-xs-12">
-                    <div class="x_panel fixed_height_320">
+<div class="space-y-6">
+    <!-- Run Information Row -->
+    <div class="rounded-xl border bg-card text-card-foreground shadow p-4 md:p-6">
+    <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-6">
+        <div class="flex flex-wrap items-center gap-6 md:gap-8 flex-1">
+            <!-- Project Info -->
+            
+            <div class="flex items-center gap-3 min-w-[150px]">
+                <div class="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary">
+                    <i class="fa-solid fa-rocket text-sm"></i>
+                </div>
+                <div class="truncate">
+                    <p class="text-[9px] text-muted-foreground uppercase font-bold tracking-wider mb-0.5">Project & Release</p>
+                    <p class="text-sm font-bold text-foreground truncate">Test Info <span class="text-xs font-medium text-muted-foreground ml-1">v1.2.3</span></p>
+                </div>
+            </div>
+            
+
+            <!-- Cycle Info -->
+            
+            <div class="flex items-center gap-3 min-w-[150px]">
+                <div class="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary">
+                    <i class="fa-solid fa-rotate text-sm"></i>
+                </div>
+                <div class="truncate">
+                    <p class="text-[9px] text-muted-foreground uppercase font-bold tracking-wider mb-0.5">Test Cycle</p>
+                    <p class="text-sm font-bold text-foreground truncate">Smoke-1</p>
+                </div>
+            </div>
+            
+
+            <!-- Execution Period -->
+            <div class="flex items-center gap-3 min-w-[200px]">
+                <div class="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary">
+                    <i class="fa-solid fa-clock text-sm"></i>
+                </div>
+                <div class="truncate text-xs">
+                    <p class="text-[9px] text-muted-foreground uppercase font-bold tracking-wider mb-0.5">Execution Period</p>
+                    <div class="font-medium text-foreground flex items-center gap-2">
+                        <span>2026/07/03 10:07:52</span>
+                        <span class="opacity-40 italic font-normal ml-2">Duration:</span>
+                        <span>00:00:10.537</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Custom User Metadata -->
+            
+                
+                
+                <div class="flex items-center gap-3 min-w-[120px]">
+                    <div class="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary">
+                        <i class="fa-solid fa-circle-info text-sm"></i>
+                    </div>
+                    <div class="truncate">
+                        <p class="text-[9px] text-muted-foreground uppercase font-bold tracking-wider mb-0.5">Project</p>
+                        <p class="text-sm font-bold text-foreground truncate">Book Cart Project</p>
+                    </div>
+                </div>
+                
+                
+                
+                <div class="flex items-center gap-3 min-w-[120px]">
+                    <div class="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary">
+                        <i class="fa-solid fa-circle-info text-sm"></i>
+                    </div>
+                    <div class="truncate">
+                        <p class="text-[9px] text-muted-foreground uppercase font-bold tracking-wider mb-0.5">Release</p>
+                        <p class="text-sm font-bold text-foreground truncate">1.2.3</p>
+                    </div>
+                </div>
+                
+                
+                
+                <div class="flex items-center gap-3 min-w-[120px]">
+                    <div class="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary">
+                        <i class="fa-solid fa-circle-info text-sm"></i>
+                    </div>
+                    <div class="truncate">
+                        <p class="text-[9px] text-muted-foreground uppercase font-bold tracking-wider mb-0.5">Cycle</p>
+                        <p class="text-sm font-bold text-foreground truncate">Smoke-1</p>
+                    </div>
+                </div>
+                
+                
+            
+        </div>
+    </div>
+</div>
+
+
+    <!-- Top row - Key metrics status -->
+    <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <div class="rounded-xl border bg-card text-card-foreground shadow p-6">
+            <h3 class="text-sm font-semibold mb-4 text-muted-foreground uppercase tracking-wider">Features Status</h3>
+            <div id="features-chart" class="h-64"></div>
+        </div>
+        <div class="rounded-xl border bg-card text-card-foreground shadow p-6">
+            <h3 class="text-sm font-semibold mb-4 text-muted-foreground uppercase tracking-wider">Scenarios Status</h3>
+            <div id="scenarios-chart" class="h-64"></div>
+        </div>
+        <div class="rounded-xl border bg-card text-card-foreground shadow p-6">
+            <h3 class="text-sm font-semibold mb-4 text-muted-foreground uppercase tracking-wider">Steps Status</h3>
+            <div id="steps-status-chart" class="h-64"></div>
+        </div>
+    </div>
+
+    <!-- Analytics Charts -->
+    <div class="grid gap-6 lg:grid-cols-3">
+        <div class="rounded-xl border bg-card text-card-foreground shadow p-6">
+            <h3 class="text-sm font-semibold mb-4 text-muted-foreground uppercase tracking-wider">Device & OS</h3>
+            <div id="device-os-chart" class="h-64"></div>
+        </div>
+        <div class="rounded-xl border bg-card text-card-foreground shadow p-6">
+            <h3 class="text-sm font-semibold mb-4 text-muted-foreground uppercase tracking-wider">Browsers</h3>
+            <div id="browser-chart" class="h-64"></div>
+        </div>
+        <div class="rounded-xl border bg-card text-card-foreground shadow p-6">
+            <h3 class="text-sm font-semibold mb-4 text-muted-foreground uppercase tracking-wider">Top 10 Tags</h3>
+            <div id="tag-distribution-chart" class="h-64"></div>
+        </div>
+    </div>
+
+    <!-- Status Trend -->
+    <div class="rounded-xl border bg-card text-card-foreground shadow p-6">
+        <h3 class="text-sm font-semibold mb-4 text-muted-foreground uppercase tracking-wider">Features Status Trend</h3>
+        <div id="status-trend-chart" class="h-80 w-full"></div>
+    </div>
+
+    <!-- Features Overview Table -->
+    <div class="rounded-xl border bg-card text-card-foreground shadow overflow-hidden" id="features-table-container">
+    <div class="px-6 py-4 border-b flex flex-col md:flex-row md:items-center justify-between gap-4">
+        <h3 class="text-lg font-semibold whitespace-nowrap">Features Overview</h3>
+        <div class="flex flex-wrap items-center gap-3 w-full md:w-auto">
+            <div class="relative flex-1 md:w-64">
+                <span class="absolute inset-y-0 left-0 flex items-center pl-3 text-muted-foreground">
+                    <i class="fa-solid fa-magnifying-glass text-xs"></i>
+                </span>
+                <input type="text" id="feature-search" placeholder="Search features..." 
+                        class="w-full h-9 pl-9 pr-4 rounded-md border border-input bg-background text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 transition-shadow shadow-sm">
+            </div>
+            <div class="flex items-center gap-2">
+                <span class="text-xs font-medium text-muted-foreground whitespace-nowrap">Show:</span>
+                <select id="records-per-page" 
+                        class="h-9 px-2 rounded-md border border-input bg-background text-xs ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 transition-shadow shadow-sm min-w-[70px]">
+                    <option value="10">10</option>
+                    <option value="25">25</option>
+                    <option value="50">50</option>
+                    <option value="100">100</option>
+                </select>
+            </div>
+        </div>
+    </div>
+    <div class="overflow-x-auto">
+        <table class="w-full text-sm text-left">
+            <thead class="bg-muted text-muted-foreground uppercase text-xs font-semibold">
+                <tr>
+                    <th class="px-4 md:px-6 py-3 cursor-pointer hover:text-foreground transition-colors group">
+                        <div class="flex items-center gap-1.5">
+                            Feature Name
+                            <i class="fa-solid fa-sort opacity-30 group-hover:opacity-100 text-[10px]"></i>
+                        </div>
+                    </th>
+                    <th class="px-4 md:px-6 py-3">Environment</th>
+                    <th class="px-4 md:px-6 py-3 cursor-pointer hover:text-foreground transition-colors group">
+                        <div class="flex items-center gap-1.5">
+                            Steps status
+                            <i class="fa-solid fa-sort opacity-30 group-hover:opacity-100 text-[10px]"></i>
+                        </div>
+                    </th>
+                    <th class="px-4 md:px-6 py-3 text-right cursor-pointer hover:text-foreground transition-colors group">
+                        <div class="flex items-center justify-end gap-1.5">
+                            Pass %
+                            <i class="fa-solid fa-sort opacity-30 group-hover:opacity-100 text-[10px]"></i>
+                        </div>
+                    </th>
+                </tr>
+            </thead>
+            <tbody id="features-table-body" class="divide-y divide-border">
+                
+                
+                <tr class="hover:bg-muted/50 transition-colors">
+                    <td class="px-4 md:px-6 py-4 whitespace-nowrap md:whitespace-normal min-w-[200px]">
+                        <a href="features/7b4e52b6-f021-41df-8bee-00f68638fd29-user-authentication-tests.html" class="font-medium text-primary hover:underline">
+                            User Authentication tests
+                        </a>
+                        <div class="flex flex-wrap gap-1 mt-1">
+                            
+                        </div>
+                    </td>
+                    <td class="px-4 md:px-6 py-4 whitespace-nowrap">
                         
-<div class="x_title">
-    <h2>Test Info</h2>
-    <ul class="nav navbar-right panel_toolbox">
-        <li>
-            <a class="collapse-link">
-                <i class="fa fa-chevron-up"></i>
-            </a>
-        </li>
-    </ul>
-    <div class="clearfix"></div>
-</div>
-<div class="x_content">
-    <div class="dashboard-widget-content">
-        <table class="quick-list">
-            
-                
-                <tr>
-                    <td class="meta-data-title">Project</td>
-                    <td class="meta-data-data">Book Cart Project</td>
+                        
+                        
+                        
+                        
+                        <div class="flex items-center gap-2.5 text-muted-foreground">
+                            
+                            <span title="Darshan - Machine">
+                                <i class="fa-solid fa-desktop text-base"></i>
+                            </span>
+                            
+                            
+                            <span title="Windows 11">
+                                <i class="fa-brands fa-windows text-base"></i>
+                            </span>
+                            
+                            
+                            
+                            <span title="chrome 118">
+                                <i class="fa-brands fa-chrome text-base"></i>
+                            </span>
+                            
+                            
+                            
+                            <span title="Local machine">
+                                <i class="fa-solid fa-computer text-base"></i>
+                            </span>
+                            
+                        </div>
+                    </td>
+                    <td class="px-4 md:px-6 py-4 min-w-[240px]">
+                        <div class="flex h-2 w-full overflow-hidden rounded-full bg-secondary">
+                            
+                            <div class="h-full bg-status-passed" style="width: 100%"></div>
+                            
+                            
+                            
+                            
+                            
+                            
+                        </div>
+                        <div class="mt-1 flex flex-wrap gap-x-2 gap-y-0.5 text-[10px] font-medium uppercase">
+                            <span class="text-status-passed">2 Passed</span>
+                            <span class="text-status-failed">0 Failed</span>
+                            
+                            
+                            
+                            <span class="text-status-skipped">0 Skipped</span>
+                        </div>
+                    </td>
+                    <td class="px-6 py-4 text-right">
+                         
+                         
+                            
+                         
+                         <div class="inline-flex items-center justify-end relative h-12 w-12">
+                            <svg class="h-12 w-12 transform -rotate-90">
+                              <circle class="text-muted/20" stroke-width="3" stroke="currentColor" fill="transparent" r="20" cx="24" cy="24" />
+                              <circle class="text-status-passed transition-all duration-500 ease-out" stroke-width="3" 
+                                stroke-dasharray="125.6" 
+                                stroke-dashoffset="0" 
+                                stroke-linecap="round" stroke="currentColor" fill="transparent" r="20" cx="24" cy="24" />
+                            </svg>
+                            <span class="absolute inset-0 flex items-center justify-center text-[10px] font-bold">100%</span>
+                         </div>
+                    </td>
                 </tr>
                 
-                <tr>
-                    <td class="meta-data-title">Release</td>
-                    <td class="meta-data-data">1.2.3</td>
+                <tr class="hover:bg-muted/50 transition-colors">
+                    <td class="px-4 md:px-6 py-4 whitespace-nowrap md:whitespace-normal min-w-[200px]">
+                        <a href="features/69f00f15-17d2-42ed-ae78-da3b41fbb56c-register-the-application.html" class="font-medium text-primary hover:underline">
+                            Register the application
+                        </a>
+                        <div class="flex flex-wrap gap-1 mt-1">
+                            
+                        </div>
+                    </td>
+                    <td class="px-4 md:px-6 py-4 whitespace-nowrap">
+                        
+                        
+                        
+                        
+                        
+                        <div class="flex items-center gap-2.5 text-muted-foreground">
+                            
+                            <span title="Darshan - Machine">
+                                <i class="fa-solid fa-desktop text-base"></i>
+                            </span>
+                            
+                            
+                            <span title="Windows 11">
+                                <i class="fa-brands fa-windows text-base"></i>
+                            </span>
+                            
+                            
+                            
+                            <span title="chrome 118">
+                                <i class="fa-brands fa-chrome text-base"></i>
+                            </span>
+                            
+                            
+                            
+                            <span title="Local machine">
+                                <i class="fa-solid fa-computer text-base"></i>
+                            </span>
+                            
+                        </div>
+                    </td>
+                    <td class="px-4 md:px-6 py-4 min-w-[240px]">
+                        <div class="flex h-2 w-full overflow-hidden rounded-full bg-secondary">
+                            
+                            <div class="h-full bg-status-passed" style="width: 100%"></div>
+                            
+                            
+                            
+                            
+                            
+                            
+                        </div>
+                        <div class="mt-1 flex flex-wrap gap-x-2 gap-y-0.5 text-[10px] font-medium uppercase">
+                            <span class="text-status-passed">1 Passed</span>
+                            <span class="text-status-failed">0 Failed</span>
+                            
+                            
+                            
+                            <span class="text-status-skipped">0 Skipped</span>
+                        </div>
+                    </td>
+                    <td class="px-6 py-4 text-right">
+                         
+                         
+                            
+                         
+                         <div class="inline-flex items-center justify-end relative h-12 w-12">
+                            <svg class="h-12 w-12 transform -rotate-90">
+                              <circle class="text-muted/20" stroke-width="3" stroke="currentColor" fill="transparent" r="20" cx="24" cy="24" />
+                              <circle class="text-status-passed transition-all duration-500 ease-out" stroke-width="3" 
+                                stroke-dasharray="125.6" 
+                                stroke-dashoffset="0" 
+                                stroke-linecap="round" stroke="currentColor" fill="transparent" r="20" cx="24" cy="24" />
+                            </svg>
+                            <span class="absolute inset-0 flex items-center justify-center text-[10px] font-bold">100%</span>
+                         </div>
+                    </td>
                 </tr>
                 
-                <tr>
-                    <td class="meta-data-title">Cycle</td>
-                    <td class="meta-data-data">Smoke-1</td>
-                </tr>
-                
-            
+            </tbody>
         </table>
     </div>
-</div>
 
-
-                    </div>
-                </div>
-                
-            </div>
-
-            <div class="row">
-                <div class="col-md-12 col-sm-12 col-xs-12">
-    <div class="x_panel">
-        <div class="x_title">
-            <h2>Features overview</h2>
-            <ul class="nav navbar-right panel_toolbox">
-                <li>
-                    <a class="collapse-link">
-                        <i class="fa fa-chevron-up"></i>
-                    </a>
-                </li>
-            </ul>
-            <div class="clearfix"></div>
+    <!-- Pagination -->
+    <div class="px-6 py-4 border-t flex items-center justify-between text-xs text-muted-foreground bg-muted/20">
+        <div>
+            Showing <span id="showing-start" class="font-bold text-foreground">1</span> to <span id="showing-end" class="font-bold text-foreground">10</span> of <span id="total-records" class="font-bold text-foreground">2</span> entries
         </div>
-
-        <div class="x_content">
-            <div class="row" style="margin-bottom: 10px;">
-                <div class="col-md-4 col-sm-6 col-xs-12">
-                    <input id="features-search-box" type="text" class="form-control" placeholder="Search features..." autocomplete="off">
-                </div>
+        <div class="flex items-center gap-1" id="pagination-controls">
+            <button id="prev-page" disabled class="h-8 w-8 flex items-center justify-center rounded border border-transparent text-foreground hover:bg-muted hover:border-border transition-all disabled:opacity-30 disabled:cursor-not-allowed">
+                <i class="fa-solid fa-chevron-left"></i>
+            </button>
+            <div id="page-numbers" class="flex items-center gap-1">
+                <!-- Page buttons will be injected here -->
             </div>
-            <div class="table-responsive">
-                <table id="features-table" class="table table-striped table-bordered dt-responsive nowrap" cellspacing="0"
-                       width="100%">
-                    <thead>
-                    <tr>
-                        <th>Feature name</th>
-                        <th><i class="fa fa-tags fa-lg" title="Tags"></i></th>
-                        <th>Status</th>
-                        
-                            <th class="text-center">
-                                <i class="fa fa-desktop fa-lg"></i>
-                                <i class="fa fa-mobile fa-lg"></i>
-                            </th>
-                            <th>Device</th>
-                            <th>OS</th>
-                            
-                            
-                            <th>Browser</th>
-                            
-                        
-                        
-                        
-                        <th>Total</th>
-                        <th>Passed</th>
-                        <th>Failed</th>
-                        
-                        
-                        
-                        
-                    </tr>
-                    </thead>
-
-                    <tbody>
-                    
-                    <tr>
-                        <td>
-                            <a href="features/cf7af929-50ea-4e3f-b54a-b3f76d8e089d-user-authentication-tests.html">User Authentication tests</a>
-                        </td>
-                        <td class="text-center">
-                            
-                            
-                            
-                            
-                            
-                            
-                            
-                            
-                            
-                            
-                        </td>
-                        <td class="text-center">
-                            
-                            
-                            
-                            
-                            
-                            
-                            <i class="fa fa-check-circle passed-color fa-lg" data-bs-toggle="tooltip" data-placement="top" title="Passed">
-                                <span>check-circle passed-color</span>
-                            </i>
-                        </td>
-                        
-                            <td class="text-center">
-                                
-                                
-                                
-                                
-                                
-                                
-                                <i class="fa fa-desktop fa-lg" data-bs-toggle="tooltip" data-placement="top" title="Desktop">
-                                    <span>desktop</span>
-                                </i>
-                            </td>
-                            <td>
-                                
-                                
-                                
-                                
-                                Darshan - Machine
-                            </td>
-                            <td>
-                                
-                                
-                                
-                                
-                                <i class="fa fa-windows fa-lg"><span>windows</span></i>
-                                11
-                            </td>
-                            
-                            
-                            <td>
-                                
-                                
-                                
-                                
-                                
-                                
-                                <i class="fa fa-chrome fa-lg">
-                                    <span>chrome</span></i>
-                                118
-                                
-
-                                
-                            </td>
-                            
-                        
-                        
-                        
-                        <td class="text-right ">2</td>
-                        <td class="text-right ">2</td>
-                        <td class="text-right none">0</td>
-                        
-                        
-                        
-                        
-                    </tr>
-                    
-                    <tr>
-                        <td>
-                            <a href="features/68014b9b-56d9-4bc3-8ae4-a26d82ca8436-register-the-application.html">Register the application</a>
-                        </td>
-                        <td class="text-center">
-                            
-                            
-                            
-                            
-                            
-                            
-                            
-                            
-                        </td>
-                        <td class="text-center">
-                            
-                            
-                            
-                            
-                            
-                            
-                            <i class="fa fa-exclamation-circle failed-color fa-lg" data-bs-toggle="tooltip" data-placement="top" title="Failed">
-                                <span>exclamation-circle failed-color</span>
-                            </i>
-                        </td>
-                        
-                            <td class="text-center">
-                                
-                                
-                                
-                                
-                                
-                                
-                                <i class="fa fa-desktop fa-lg" data-bs-toggle="tooltip" data-placement="top" title="Desktop">
-                                    <span>desktop</span>
-                                </i>
-                            </td>
-                            <td>
-                                
-                                
-                                
-                                
-                                Darshan - Machine
-                            </td>
-                            <td>
-                                
-                                
-                                
-                                
-                                <i class="fa fa-windows fa-lg"><span>windows</span></i>
-                                11
-                            </td>
-                            
-                            
-                            <td>
-                                
-                                
-                                
-                                
-                                
-                                
-                                <i class="fa fa-chrome fa-lg">
-                                    <span>chrome</span></i>
-                                118
-                                
-
-                                
-                            </td>
-                            
-                        
-                        
-                        
-                        <td class="text-right ">1</td>
-                        <td class="text-right none">0</td>
-                        <td class="text-right ">1</td>
-                        
-                        
-                        
-                        
-                    </tr>
-                    
-                    </tbody>
-
-                </table>
-            </div>
+            <button id="next-page" disabled class="h-8 w-8 flex items-center justify-center rounded border border-transparent text-foreground hover:bg-muted hover:border-border transition-all disabled:opacity-30 disabled:cursor-not-allowed">
+                <i class="fa-solid fa-chevron-right"></i>
+            </button>
         </div>
     </div>
 </div>
 
+</div>
+
+<script>
+    // Embedded data for charts
+    const chartData = {
+        summary: {"ambiguous":0,"failed":0,"passed":2,"notDefined":0,"pending":0,"skipped":0,"total":2,"ambiguousPercentage":"0.00","failedPercentage":"0.00","notDefinedPercentage":"0.00","pendingPercentage":"0.00","skippedPercentage":"0.00","passedPercentage":"100.00","steps":{"passed":0,"failed":0,"skipped":0,"total":0}},
+        scenarios: {"failed":0,"ambiguous":0,"notDefined":0,"pending":0,"skipped":0,"passed":3,"total":3,"ambiguousPercentage":"0.00","failedPercentage":"0.00","notDefinedPercentage":"0.00","passedPercentage":"100.00","pendingPercentage":"0.00","skippedPercentage":"0.00"},
+        features: [{"description":"","elements":[{"description":"","id":"user-authentication-tests;valid-login","keyword":"Scenario","line":8,"name":"Valid Login","steps":[{"keyword":"Before","hidden":true,"result":{"status":"passed","duration":267876099}},{"arguments":[],"keyword":"Given ","line":4,"name":"User Navigate to the website","match":{"location":"src\\test\\steps\\loginstep.ts:7"},"result":{"status":"passed","duration":1248271299},"time":"00:00:01.248"},{"arguments":[],"keyword":"And ","line":5,"name":"user click on my account link","match":{"location":"src\\test\\steps\\loginstep.ts:11"},"result":{"status":"passed","duration":107899800},"time":"00:00:00.107"},{"arguments":[],"keyword":"And ","line":6,"name":"user click on the login link","match":{"location":"src\\test\\steps\\loginstep.ts:15"},"result":{"status":"passed","duration":240729099},"time":"00:00:00.240"},{"arguments":[],"keyword":"And ","line":9,"name":"user enter valid username as \"dharshan10@gmail.com\"","match":{"location":"src\\test\\steps\\loginstep.ts:19"},"result":{"status":"passed","duration":53108499},"time":"00:00:00.053"},{"arguments":[],"keyword":"And ","line":10,"name":"user enter valid password as \"1234\"","match":{"location":"src\\test\\steps\\loginstep.ts:23"},"result":{"status":"passed","duration":13744999},"time":"00:00:00.013"},{"arguments":[],"keyword":"When ","line":11,"name":"user click on the login button","match":{"location":"src\\test\\steps\\loginstep.ts:27"},"result":{"status":"passed","duration":1142794200},"time":"00:00:01.142"},{"arguments":[],"keyword":"Then ","line":12,"name":"login should be success","match":{"location":"src\\test\\steps\\loginstep.ts:31"},"result":{"status":"passed","duration":51290500},"time":"00:00:00.051"},{"keyword":"After","hidden":true,"result":{"status":"passed","duration":33976899}}],"tags":[],"type":"scenario","duration":2.857838396,"time":"00:00:02.857","passed":7,"failed":0,"notDefined":0,"skipped":0,"pending":0,"ambiguous":0},{"description":"","id":"user-authentication-tests;invalid-login","keyword":"Scenario","line":14,"name":"Invalid Login","steps":[{"keyword":"Before","hidden":true,"result":{"status":"passed","duration":206478500}},{"arguments":[],"keyword":"Given ","line":4,"name":"User Navigate to the website","match":{"location":"src\\test\\steps\\loginstep.ts:7"},"result":{"status":"passed","duration":1084817500},"time":"00:00:01.084"},{"arguments":[],"keyword":"And ","line":5,"name":"user click on my account link","match":{"location":"src\\test\\steps\\loginstep.ts:11"},"result":{"status":"passed","duration":98321200},"time":"00:00:00.098"},{"arguments":[],"keyword":"And ","line":6,"name":"user click on the login link","match":{"location":"src\\test\\steps\\loginstep.ts:15"},"result":{"status":"passed","duration":260349599},"time":"00:00:00.260"},{"arguments":[],"keyword":"And ","line":15,"name":"user enter invalid username as \"dharshan@gmail.com\"","match":{"location":"src\\test\\steps\\loginstep.ts:35"},"result":{"status":"passed","duration":38146800},"time":"00:00:00.038"},{"arguments":[],"keyword":"And ","line":16,"name":"user enter invalid password as \"1234\"","match":{"location":"src\\test\\steps\\loginstep.ts:39"},"result":{"status":"passed","duration":11102399},"time":"00:00:00.011"},{"arguments":[],"keyword":"When ","line":17,"name":"user click on the login button","match":{"location":"src\\test\\steps\\loginstep.ts:27"},"result":{"status":"passed","duration":1318680999},"time":"00:00:01.318"},{"arguments":[],"keyword":"Then ","line":18,"name":"login should not be success","match":{"location":"src\\test\\steps\\loginstep.ts:43"},"result":{"status":"passed","duration":49177599},"time":"00:00:00.049"},{"keyword":"After","hidden":true,"result":{"status":"passed","duration":11625900}}],"tags":[],"type":"scenario","duration":2.860596096,"time":"00:00:02.860","passed":7,"failed":0,"notDefined":0,"skipped":0,"pending":0,"ambiguous":0}],"id":"7b4e52b6-f021-41df-8bee-00f68638fd29-user-authentication-tests","line":1,"keyword":"Feature","name":"User Authentication tests","tags":[],"uri":"src\\test\\features\\login.feature","metadata":{"browser":{"name":"chrome","version":"118"},"device":"Darshan - Machine","platform":{"name":"Windows","version":"11"}},"scenarios":{"passed":2,"failed":0,"notDefined":0,"skipped":0,"pending":0,"ambiguous":0,"passedPercentage":"100.00","failedPercentage":"0.00","notDefinedPercentage":"0.00","skippedPercentage":"0.00","pendingPercentage":"0.00","ambiguousPercentage":"0.00","total":2},"duration":5718434492,"time":"00:00:05.718","isFailed":false,"isAmbiguous":false,"isSkipped":false,"isNotdefined":false,"isPending":false,"passed":2,"failed":0,"notDefined":0,"skipped":0,"pending":0,"ambiguous":0,"totalTime":5718434492,"app":"","browser":"chrome 118","device":"Darshan - Machine","os":"Windows 11","executionPlatform":"local"},{"description":"","elements":[{"description":"","id":"register-the-application;valid-register","keyword":"Scenario","line":7,"name":"Valid Register","steps":[{"keyword":"Before","hidden":true,"result":{"status":"passed","duration":210350999}},{"arguments":[],"keyword":"Given ","line":4,"name":"User Navigate to the application","match":{"location":"src\\test\\steps\\registerstep.ts:4"},"result":{"status":"passed","duration":2549875200},"time":"00:00:02.549"},{"arguments":[],"keyword":"And ","line":5,"name":"user click on the my account link","match":{"location":"src\\test\\steps\\registerstep.ts:8"},"result":{"status":"passed","duration":75933700},"time":"00:00:00.075"},{"arguments":[],"keyword":"And ","line":8,"name":"user click on the Register link","match":{"location":"src\\test\\steps\\registerstep.ts:12"},"result":{"status":"passed","duration":269529899},"time":"00:00:00.269"},{"arguments":[],"keyword":"And ","line":9,"name":"user enter valid firstname as \"dharshan\"","match":{"location":"src\\test\\steps\\registerstep.ts:16"},"result":{"status":"passed","duration":237015500},"time":"00:00:00.237"},{"arguments":[],"keyword":"And ","line":10,"name":"user enter valid lastname as \"raj\"","match":{"location":"src\\test\\steps\\registerstep.ts:20"},"result":{"status":"passed","duration":9161100},"time":"00:00:00.009"},{"arguments":[],"keyword":"And ","line":11,"name":"user enter valid email as \"dharshan354975650@gmail.com\"","match":{"location":"src\\test\\steps\\registerstep.ts:24"},"result":{"status":"passed","duration":15146899},"time":"00:00:00.015"},{"arguments":[],"keyword":"And ","line":12,"name":"user enter valid telephone as \"1234567890\"","match":{"location":"src\\test\\steps\\registerstep.ts:28"},"result":{"status":"passed","duration":11590199},"time":"00:00:00.011"},{"arguments":[],"keyword":"And ","line":13,"name":"user enter password as \"1234\"","match":{"location":"src\\test\\steps\\registerstep.ts:32"},"result":{"status":"passed","duration":16885900},"time":"00:00:00.016"},{"arguments":[],"keyword":"And ","line":14,"name":"user enter confirm password as \"1234\"","match":{"location":"src\\test\\steps\\registerstep.ts:36"},"result":{"status":"passed","duration":13031100},"time":"00:00:00.013"},{"arguments":[],"keyword":"And ","line":15,"name":"user check privacy and policy","match":{"location":"src\\test\\steps\\registerstep.ts:40"},"result":{"status":"passed","duration":57869300},"time":"00:00:00.057"},{"arguments":[],"keyword":"When ","line":16,"name":"user click on the continue button","match":{"location":"src\\test\\steps\\registerstep.ts:44"},"result":{"status":"passed","duration":1518139999},"time":"00:00:01.518"},{"arguments":[],"keyword":"Then ","line":17,"name":"register should be success","match":{"location":"src\\test\\steps\\registerstep.ts:48"},"result":{"status":"passed","duration":44495100},"time":"00:00:00.044"},{"keyword":"After","hidden":true,"result":{"status":"passed","duration":10760700}}],"tags":[],"type":"scenario","duration":4.818673896,"time":"00:00:04.818","passed":12,"failed":0,"notDefined":0,"skipped":0,"pending":0,"ambiguous":0}],"id":"69f00f15-17d2-42ed-ae78-da3b41fbb56c-register-the-application","line":1,"keyword":"Feature","name":"Register the application","tags":[],"uri":"src\\test\\features\\register.feature","metadata":{"browser":{"name":"chrome","version":"118"},"device":"Darshan - Machine","platform":{"name":"Windows","version":"11"}},"scenarios":{"passed":1,"failed":0,"notDefined":0,"skipped":0,"pending":0,"ambiguous":0,"passedPercentage":"100.00","failedPercentage":"0.00","notDefinedPercentage":"0.00","skippedPercentage":"0.00","pendingPercentage":"0.00","ambiguousPercentage":"0.00","total":1},"duration":4818673896,"time":"00:00:04.818","isFailed":false,"isAmbiguous":false,"isSkipped":false,"isNotdefined":false,"isPending":false,"passed":1,"failed":0,"notDefined":0,"skipped":0,"pending":0,"ambiguous":0,"totalTime":4818673896,"app":"","browser":"chrome 118","device":"Darshan - Machine","os":"Windows 11","executionPlatform":"local"}]
+    };
+</script>
+
             </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="border-t bg-background px-6 py-4 mt-8">
+    <div class="mx-auto max-w-7xl text-center">
+        
+            <p class="text-xs text-muted-foreground">Generated by <a href="https://github.com/WasiqB/multiple-cucumber-html-reporter" class="text-primary hover:underline">Multiple Cucumber HTML Reporter</a></p>
+        
+    </div>
+</footer>
+
+    </div>
+
+    <!-- Media Modal -->
+    <div id="media-modal" class="fixed inset-0 z-50 hidden items-center justify-center bg-black/50 p-4" onclick="closeModal()">
+    <div class="relative w-full max-w-4xl max-h-[90vh] bg-background rounded-lg shadow-lg flex flex-col overflow-hidden" onclick="event.stopPropagation()">
+        <!-- Header -->
+        <div class="flex items-center justify-between border-b p-4 text-card-foreground">
+            <h2 id="modal-title" class="text-lg font-semibold truncate mr-4">Attachment</h2>
+            <button onclick="closeModal()" class="rounded-lg p-1 hover:bg-muted transition-colors">
+                <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+            </button>
         </div>
-         
-            <div class="created-by">
-                <p>Maintained by Wasiq Bhamla. Find me on:</p>
-                <a href="https://www.youtube.com/@WasiqBhamla" target="_blank"><i class="fa fa-youtube-square fa-2x"></i></a>
-                <a href="https://github.com/WasiqB/" target="_blank"><i class="fa fa-github-square fa-2x"></i></a>
-                <a href="https://www.linkedin.com/in/wasiqbhamla/" target="_blank"><i class="fa fa-linkedin-square fa-2x"></i></a>
-                <a href="https://stackoverflow.com/users/5320558/wasiq-bhamla" target="_blank"><i class="fa fa-stack-overflow fa-2x"></i></a>
-            </div>
-         
-
         
-            <script src="assets/js/jquery.min.js"></script>
-            <script src="assets/js/bootstrap.min.js"></script>
-            <script src="assets/js/Chart.min.js"></script>
+        <!-- Content -->
+        <div id="modal-content" class="overflow-auto flex-1 p-4 bg-muted/10">
+            <!-- Content will be injected here -->
+        </div>
+    </div>
+</div>
 
-            <script src="assets/js/datatables.jquery.min.js"></script>
-            <script src="assets/js/datatables.min.js"></script>
-            <script src="assets/js/datatables.bootstrap5.min.js"></script>
-            <script src="assets/js/dataTables.responsive.min.js"></script>
-            <script src="assets/js/responsive.bootstrap5.js"></script>
-        
 
-        <!-- Custom -->
-        <script>
-            $(document).ready(function () {
-                // Get search param from querystring
-                function getQueryParam(name) {
-                    const urlParams = new URLSearchParams(window.location.search);
-                    return urlParams.get(name) || '';
-                }
-
-                var searchValue = getQueryParam('search');
-                if (searchValue) {
-                    $('#features-search-box').val(searchValue);
-                }
-
-                var table = $('#features-table').DataTable({
-                    "order": [[0, "asc"]],
-                    "lengthMenu": [[50, 100, 150, -1], [50, 100, 150, "All"]],
-                    "stateSave": true
-                });
-
-                // If search param exists, filter table
-                if (searchValue) {
-                    table.search(searchValue).draw();
-                }
-
-                // Live search as user types
-                $('#features-search-box').on('input', function() {
-                    table.search(this.value).draw();
-                });
-
-                var featureOptions = {
-                    legend: false,
-                    responsive: false
-                };
-
-                var getColor = function(selector, defaultColor) {
-                    if (document.querySelector(selector)) {
-                        return getComputedStyle(document.querySelector(selector)).color
-                    }
-                    return defaultColor
-                }
-
-                new Chart(document.getElementById("feature-chart"), {
-                    type: 'doughnut',
-                    tooltipFillColor: "rgba(51, 51, 51, 0.55)",
-                    data: {
-                        labels: [
-                            "Passed",
-                            "Failed",
-                            "Pending",
-                            "Skipped",
-                            "Ambiguous",
-                            "Not Defined"
-                        ],
-                        datasets: [{
-                            data: [
-                                1,
-                                1,
-                                0,
-                                0,
-                                0,
-                                0
-                            ],
-                            backgroundColor: [
-                                getColor(".passed-color", "#26B99A"),
-                                getColor(".failed-color", "#E74C3C"),
-                                getColor(".pending-color", "#FFD119"),
-                                getColor(".skipped-color", "#3498DB"),
-                                getColor(".ambiguous-color", "#b73122"),
-                                getColor(".not-defined-color", "#F39C12")
-                            ]
-                        }]
-                    },
-                    options: featureOptions
-                });
-
-                var scenarioOptions = {
-                    legend: false,
-                    responsive: false
-                };
-
-                new Chart(document.getElementById("scenario-chart"), {
-                    type: 'doughnut',
-                    tooltipFillColor: "rgba(51, 51, 51, 0.55)",
-                    data: {
-                        labels: [
-                            "Passed",
-                            "Failed",
-                            "Pending",
-                            "Skipped",
-                            "Ambiguous",
-                            "Not Defined"
-                        ],
-                        datasets: [{
-                            data: [
-                                2,
-                                1,
-                                0,
-                                0,
-                                0,
-                                0
-                            ],
-                            backgroundColor: [
-                                getColor(".passed-color", "#26B99A"),
-                                getColor(".failed-color", "#E74C3C"),
-                                getColor(".pending-color", "#FFD119"),
-                                getColor(".skipped-color", "#3498DB"),
-                                getColor(".ambiguous-color", "#b73122"),
-                                getColor(".not-defined-color", "#F39C12")
-                            ]
-                        }]
-                    },
-                    options: scenarioOptions
-                });
-
-                $(".x_title").on("click", function () {
-  var $BOX_PANEL = $(this).closest(".x_panel"),
-    $ICON = $(this).find(".collapse-link i"),
-    $BOX_CONTENT = $BOX_PANEL.find(".x_content");
-
-  // fix for some div with hardcoded fix class
-  if ($BOX_PANEL.attr("style")) {
-    $BOX_CONTENT.slideToggle(200, function () {
-      $BOX_PANEL.removeAttr("style");
-    });
-  } else {
-    $BOX_CONTENT.slideToggle(200);
-    $BOX_PANEL.css("height", "auto");
-  }
-
-  $ICON.toggleClass("fa-chevron-up fa-chevron-down");
-});
-
-$("body").tooltip({
-  selector: '[data-bs-toggle="tooltip"]',
-});
-
-hideResult = (resultId) => {
-  $("span[class*=step]").closest("div.x_panel[style]").hide();
-  $("span[class*=" + resultId + "]")
-    .closest("div.x_panel[style]")
-    .show();
-};
-
-showAll = () => {
-  $("span[class*=step]").closest("div.x_panel[style]").show();
-};
-
-$(document).ready(() => {
-  const status = [
-    "passed",
-    "failed",
-    "pending",
-    "skipped",
-    "ambiguous",
-    "not-defined",
-  ];
-  status.forEach((value) => {
-    var menuItem = $("span[class*=" + value + "-background]");
-    if (menuItem.length === 0) {
-      $("#" + value)
-        .parent()
-        .addClass("disabled");
-    }
-  });
-});
-
-            });
-        </script>
-    </body>
+    <script src="./scripts/utils.js"></script>
+<script src="./scripts/theme.js"></script>
+<script src="./scripts/modal.js"></script>
+<script src="./scripts/charts.js"></script>
+<script src="./scripts/table.js"></script>
+<script src="./scripts/scenarios.js"></script>
+<script src="./scripts/main.js"></script>
+</body>
 </html>

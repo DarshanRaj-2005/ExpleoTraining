@@ -1,10 +1,9 @@
-const report = require("multiple-cucumber-html-reporter");
-
+import * as report from "multiple-cucumber-html-reporter"
 report.generate({
   jsonDir: "./reports",
   reportPath: "./reports/html",
   reportName: "Playwright BDD Report",
-  pageTitle: "BookCart App Test Report",
+  pageTitle: "Tutorials Ninja Login and Register Test",
   displayDuration: false,
   metadata: {
     browser: {
