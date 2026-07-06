@@ -10,7 +10,7 @@
     "parallel": "cucumber-js src/test/features --parallel 2",
     "failed": "cucumber-js -p rerun",
     "ci": "cucumber-js src/test/features --tags @smoke --format json:reports/report.json",
-    "posttest": "npx ts-node src/helper/report.mts"
+    "posttest": "npx ts-node src/test/utils/report.mts"
   },
   "keywords": [],
   "author": "",
@@ -25,6 +25,7 @@
   },
   "dependencies": {
     "@cucumber/cucumber": "^13.0.0",
-    "csv-parse": "^7.0.1"
+    "csv-parse": "^7.0.1",
+    "multiple-cucumber-html-reporter": "^4.0.0"
   }
 }

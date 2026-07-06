@@ -3,6 +3,7 @@ module.exports = {
         "formatOptions" : {
             "snippetInterface" : "async-await"
         },
+        
         requireModule: [
             "ts-node/register"
         ],

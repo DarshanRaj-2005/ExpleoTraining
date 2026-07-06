@@ -14,7 +14,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 203877799
+              "duration": 196501700
             }
           },
           {
@@ -27,7 +27,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1732021600
+              "duration": 1608755300
             }
           },
           {
@@ -40,7 +40,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 100952699
+              "duration": 67200599
             }
           },
           {
@@ -53,7 +53,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 73944300
+              "duration": 71692700
             }
           },
           {
@@ -66,7 +66,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 13641000
+              "duration": 12312199
             }
           },
           {
@@ -74,7 +74,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 50342800
+              "duration": 39863100
             }
           }
         ],
@@ -85,7 +85,7 @@
         "description": "",
         "id": "saucedemo-login;invalid-login",
         "keyword": "Scenario",
-        "line": 11,
+        "line": 12,
         "name": "Invalid Login",
         "steps": [
           {
@@ -93,7 +93,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 206864399
+              "duration": 142981099
             }
           },
           {
@@ -106,46 +106,46 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1631918499
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "And ",
-            "line": 12,
-            "name": "user enters \"invalid\" credentails",
-            "match": {
-              "location": "src\\test\\stepdefinitions\\login.step.ts:29"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 63220000
+              "duration": 1664704999
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
             "line": 13,
+            "name": "user enters \"invalid\" credentails",
+            "match": {
+              "location": "src\\test\\stepdefinitions\\login.step.ts:29"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 61619800
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 14,
             "name": "user clicks login button",
             "match": {
               "location": "src\\test\\stepdefinitions\\login.step.ts:18"
             },
             "result": {
               "status": "passed",
-              "duration": 53318299
+              "duration": 59903699
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
-            "line": 14,
+            "line": 15,
             "name": "user should get a error message",
             "match": {
               "location": "src\\test\\stepdefinitions\\login.step.ts:35"
             },
             "result": {
               "status": "passed",
-              "duration": 4916900
+              "duration": 5949799
             }
           },
           {
@@ -153,7 +153,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 33514600
+              "duration": 32122800
             }
           }
         ],

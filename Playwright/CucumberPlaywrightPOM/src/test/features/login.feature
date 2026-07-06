@@ -8,6 +8,7 @@ And user enter "valid" credentails
 And user clicks login button
 Then user should redirected to homepage
 
+
 Scenario: Invalid Login
 And user enters "invalid" credentails
 And user clicks login button

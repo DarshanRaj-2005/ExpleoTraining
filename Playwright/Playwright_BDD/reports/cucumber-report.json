@@ -5,8 +5,8 @@
       {
         "description": "",
         "id": "user-authentication-tests;valid-login",
-        "keyword": "Scenario",
-        "line": 8,
+        "keyword": "Scenario Outline",
+        "line": 16,
         "name": "Valid Login",
         "steps": [
           {
@@ -14,7 +14,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 570564699
+              "duration": 434592500
             }
           },
           {
@@ -27,7 +27,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1833184199
+              "duration": 1856261800
             }
           },
           {
@@ -40,7 +40,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 252370200
+              "duration": 149547399
             }
           },
           {
@@ -53,33 +53,33 @@
             },
             "result": {
               "status": "passed",
-              "duration": 259660700
+              "duration": 223936499
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
             "line": 9,
-            "name": "user enter valid username as \"dharshan10@gmail.com\"",
+            "name": "user enter valid username as \"darshan10@gmail.com\"",
             "match": {
               "location": "src\\test\\steps\\loginstep.ts:19"
             },
             "result": {
               "status": "passed",
-              "duration": 44303899
+              "duration": 30812399
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
             "line": 10,
-            "name": "user enter valid password as \"1234\"",
+            "name": "user enter valid password as \"darshan@12\"",
             "match": {
               "location": "src\\test\\steps\\loginstep.ts:23"
             },
             "result": {
               "status": "passed",
-              "duration": 17339699
+              "duration": 12958899
             }
           },
           {
@@ -92,7 +92,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1172998200
+              "duration": 1286419899
             }
           },
           {
@@ -105,7 +105,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 56484999
+              "duration": 22335900
             }
           },
           {
@@ -113,7 +113,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 62655099
+              "duration": 46509000
             }
           }
         ],
@@ -122,17 +122,17 @@
       },
       {
         "description": "",
-        "id": "user-authentication-tests;invalid-login",
-        "keyword": "Scenario",
-        "line": 14,
-        "name": "Invalid Login",
+        "id": "user-authentication-tests;valid-login",
+        "keyword": "Scenario Outline",
+        "line": 17,
+        "name": "Valid Login",
         "steps": [
           {
             "keyword": "Before",
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 558117500
+              "duration": 416203799
             }
           },
           {
@@ -145,7 +145,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 2090583999
+              "duration": 2078216199
             }
           },
           {
@@ -158,7 +158,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 226979999
+              "duration": 58179200
             }
           },
           {
@@ -171,59 +171,59 @@
             },
             "result": {
               "status": "passed",
-              "duration": 217681200
+              "duration": 247302299
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
-            "line": 15,
-            "name": "user enter invalid username as \"dharshan@gmail.com\"",
+            "line": 9,
+            "name": "user enter valid username as \"darshan3@gmail.com\"",
             "match": {
-              "location": "src\\test\\steps\\loginstep.ts:35"
+              "location": "src\\test\\steps\\loginstep.ts:19"
             },
             "result": {
               "status": "passed",
-              "duration": 42002899
+              "duration": 31651400
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
-            "line": 16,
-            "name": "user enter invalid password as \"1234\"",
+            "line": 10,
+            "name": "user enter valid password as \"darshan10\"",
             "match": {
-              "location": "src\\test\\steps\\loginstep.ts:39"
+              "location": "src\\test\\steps\\loginstep.ts:23"
             },
             "result": {
               "status": "passed",
-              "duration": 18670699
+              "duration": 11181499
             }
           },
           {
             "arguments": [],
             "keyword": "When ",
-            "line": 17,
+            "line": 11,
             "name": "user click on the login button",
             "match": {
               "location": "src\\test\\steps\\loginstep.ts:27"
             },
             "result": {
               "status": "passed",
-              "duration": 438140799
+              "duration": 771034900
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
-            "line": 18,
-            "name": "login should not be success",
+            "line": 12,
+            "name": "login should be success",
             "match": {
-              "location": "src\\test\\steps\\loginstep.ts:43"
+              "location": "src\\test\\steps\\loginstep.ts:31"
             },
             "result": {
               "status": "passed",
-              "duration": 50631099
+              "duration": 32275499
             }
           },
           {
@@ -231,7 +231,243 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 61414999
+              "duration": 44334199
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "user-authentication-tests;invalid-login",
+        "keyword": "Scenario",
+        "line": 27,
+        "name": "Invalid Login",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 409114200
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "User Navigate to the website",
+            "match": {
+              "location": "src\\test\\steps\\loginstep.ts:7"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1770189800
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 5,
+            "name": "user click on my account link",
+            "match": {
+              "location": "src\\test\\steps\\loginstep.ts:11"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 139051300
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 6,
+            "name": "user click on the login link",
+            "match": {
+              "location": "src\\test\\steps\\loginstep.ts:15"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 215301299
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 20,
+            "name": "user enter invalid username as \"darshan3@gmail.com\"",
+            "match": {
+              "location": "src\\test\\steps\\loginstep.ts:35"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 74001700
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 21,
+            "name": "user enter invalid password as \"1234\"",
+            "match": {
+              "location": "src\\test\\steps\\loginstep.ts:39"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 11786099
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 22,
+            "name": "user click on the login button",
+            "match": {
+              "location": "src\\test\\steps\\loginstep.ts:27"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 702354799
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 23,
+            "name": "login should not be success",
+            "match": {
+              "location": "src\\test\\steps\\loginstep.ts:43"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 46416999
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 43249799
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "user-authentication-tests;invalid-login",
+        "keyword": "Scenario",
+        "line": 28,
+        "name": "Invalid Login",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 411837299
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "User Navigate to the website",
+            "match": {
+              "location": "src\\test\\steps\\loginstep.ts:7"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1888749800
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 5,
+            "name": "user click on my account link",
+            "match": {
+              "location": "src\\test\\steps\\loginstep.ts:11"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 68773900
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 6,
+            "name": "user click on the login link",
+            "match": {
+              "location": "src\\test\\steps\\loginstep.ts:15"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 206009900
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 20,
+            "name": "user enter invalid username as \"darshan10@gmail.com\"",
+            "match": {
+              "location": "src\\test\\steps\\loginstep.ts:35"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 32054100
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 21,
+            "name": "user enter invalid password as \"1234\"",
+            "match": {
+              "location": "src\\test\\steps\\loginstep.ts:39"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 9254899
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 22,
+            "name": "user click on the login button",
+            "match": {
+              "location": "src\\test\\steps\\loginstep.ts:27"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 677842200
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 23,
+            "name": "login should not be success",
+            "match": {
+              "location": "src\\test\\steps\\loginstep.ts:43"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 56350800
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 24569199
             }
           }
         ],
@@ -261,7 +497,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 549151300
+              "duration": 491591300
             }
           },
           {
@@ -274,7 +510,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1814787500
+              "duration": 1801063999
             }
           },
           {
@@ -287,7 +523,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 284913300
+              "duration": 132488799
             }
           },
           {
@@ -300,134 +536,92 @@
             },
             "result": {
               "status": "passed",
-              "duration": 220390199
+              "duration": 190616999
             }
           },
           {
-            "arguments": [],
+            "arguments": [
+              {
+                "rows": [
+                  {
+                    "cells": [
+                      "firstname",
+                      "lastname",
+                      "email",
+                      "telephone",
+                      "password",
+                      "confirmpassword"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "dharshan",
+                      "raj",
+                      "dharshan7857@gmail.com",
+                      "1234567890",
+                      "1234",
+                      "1234"
+                    ]
+                  }
+                ]
+              }
+            ],
             "keyword": "And ",
             "line": 9,
-            "name": "user enter valid firstname as \"dharshan\"",
+            "name": "user enters the valid register details",
             "match": {
               "location": "src\\test\\steps\\registerstep.ts:16"
             },
             "result": {
               "status": "passed",
-              "duration": 122450100
+              "duration": 163875200
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
-            "line": 10,
-            "name": "user enter valid lastname as \"raj\"",
-            "match": {
-              "location": "src\\test\\steps\\registerstep.ts:20"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 21462500
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "And ",
-            "line": 11,
-            "name": "user enter valid email as \"dharshan235450@gmail.com\"",
-            "match": {
-              "location": "src\\test\\steps\\registerstep.ts:24"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 36379899
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "And ",
-            "line": 12,
-            "name": "user enter valid telephone as \"1234567890\"",
-            "match": {
-              "location": "src\\test\\steps\\registerstep.ts:28"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 23896600
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "And ",
-            "line": 13,
-            "name": "user enter password as \"1234\"",
-            "match": {
-              "location": "src\\test\\steps\\registerstep.ts:32"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 21676500
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "And ",
-            "line": 14,
-            "name": "user enter confirm password as \"1234\"",
-            "match": {
-              "location": "src\\test\\steps\\registerstep.ts:36"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 16698400
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "And ",
-            "line": 15,
+            "line": 20,
             "name": "user check privacy and policy",
             "match": {
-              "location": "src\\test\\steps\\registerstep.ts:40"
+              "location": "src\\test\\steps\\registerstep.ts:50"
             },
             "result": {
               "status": "passed",
-              "duration": 70334400
+              "duration": 47474399
             }
           },
           {
             "arguments": [],
             "keyword": "When ",
-            "line": 16,
+            "line": 21,
             "name": "user click on the continue button",
             "match": {
-              "location": "src\\test\\steps\\registerstep.ts:44"
+              "location": "src\\test\\steps\\registerstep.ts:54"
             },
             "result": {
               "status": "passed",
-              "duration": 456289299
+              "duration": 932644599
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
-            "line": 17,
+            "line": 22,
             "name": "register should be success",
             "match": {
-              "location": "src\\test\\steps\\registerstep.ts:48"
+              "location": "src\\test\\steps\\registerstep.ts:58"
             },
             "result": {
-              "status": "failed",
-              "duration": 5010826699,
-              "error_message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('//h1[text()=\\'Your Account Has Been Created!\\']')\nExpected: \u001b[32m\"Your Account Has Been Created!\"\u001b[39m\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"to.have.text\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('//h1[text()=\\'Your Account Has Been Created!\\']')\u001b[22m\n\n    at captureRawStack (C:\\Users\\dhars\\Documents\\ExpleoTraining\\Playwright\\Playwright_BDD\\node_modules\\playwright-core\\lib\\coreBundle.js:3172:17)\n    at callMatcherAsStep (C:\\Users\\dhars\\Documents\\ExpleoTraining\\Playwright\\Playwright_BDD\\node_modules\\playwright\\lib\\matchers\\expect.js:12877:57)\n    at Object.toHaveText (C:\\Users\\dhars\\Documents\\ExpleoTraining\\Playwright\\Playwright_BDD\\node_modules\\playwright\\lib\\matchers\\expect.js:12867:23)\n    at CustomWorld.<anonymous> (C:\\Users\\dhars\\Documents\\ExpleoTraining\\Playwright\\Playwright_BDD\\src\\test\\steps\\registerstep.ts:49:84)"
+              "status": "passed",
+              "duration": 51747800
             }
           },
           {
             "keyword": "After",
             "hidden": true,
             "result": {
-              "status": "failed",
-              "duration": 613733199,
-              "error_message": "TypeError: this.attach is not a function\n    at CustomWorld.<anonymous> (C:\\Users\\dhars\\Documents\\ExpleoTraining\\Playwright\\Playwright_BDD\\src\\hooks\\hooks.ts:16:20)"
+              "status": "passed",
+              "duration": 47309400
             }
           }
         ],

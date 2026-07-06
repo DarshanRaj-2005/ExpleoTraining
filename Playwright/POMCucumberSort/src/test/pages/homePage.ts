@@ -32,7 +32,6 @@ export class HomePage extends BasePage{
             const priceValue=priceTexts[i]!.replace("$","")
             prices.push(parseFloat(priceValue))
         }
-
         return prices
     }
 
