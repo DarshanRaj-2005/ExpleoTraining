@@ -1,0 +1,171 @@
+[
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "login;valid-login",
+        "keyword": "Scenario",
+        "line": 6,
+        "name": "Valid login",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 817111099
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "User navigates to application",
+            "match": {
+              "location": "src\\test\\steps\\login.step.ts:8"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1791295799
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 7,
+            "name": "User enters \"valid\" credentials",
+            "match": {
+              "location": "src\\test\\steps\\login.step.ts:13"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 97907500
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 8,
+            "name": "User clicks login button",
+            "match": {
+              "location": "src\\test\\steps\\login.step.ts:31"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 154185200
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 9,
+            "name": "User navigates to homepage",
+            "match": {
+              "location": "src\\test\\steps\\login.step.ts:26"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 21600999
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 460739700
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "login;invalid-login",
+        "keyword": "Scenario",
+        "line": 12,
+        "name": "Invalid login",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 920782999
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "User navigates to application",
+            "match": {
+              "location": "src\\test\\steps\\login.step.ts:8"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1828343300
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 13,
+            "name": "User enters \"invalid\" credentials",
+            "match": {
+              "location": "src\\test\\steps\\login.step.ts:13"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 111439000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 14,
+            "name": "User clicks login button",
+            "match": {
+              "location": "src\\test\\steps\\login.step.ts:31"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 64654999
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 15,
+            "name": "error message should be displayed",
+            "match": {
+              "location": "src\\test\\steps\\login.step.ts:36"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 6666699
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 355395500
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "login",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "login",
+    "tags": [],
+    "uri": "src\\test\\feature\\login.feature"
+  }
+]

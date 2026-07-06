@@ -1,0 +1,8 @@
+[2026-07-03T11:32:55.451Z] INFO - User navigating to application
+[2026-07-03T11:32:57.243Z] INFO - User entering valid credentials
+[2026-07-03T11:32:57.341Z] INFO - User clicks login button
+[2026-07-03T11:32:57.497Z] INFO - User navigating to homepage
+[2026-07-03T11:32:58.910Z] INFO - User navigating to application
+[2026-07-03T11:33:00.739Z] INFO - User entering invalid credentials
+[2026-07-03T11:33:00.853Z] INFO - User clicks login button
+[2026-07-03T11:33:00.918Z] ERROR - Error message displayed
