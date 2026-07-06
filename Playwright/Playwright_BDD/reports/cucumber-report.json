@@ -14,7 +14,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 267876099
+              "duration": 570564699
             }
           },
           {
@@ -27,7 +27,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1248271299
+              "duration": 1833184199
             }
           },
           {
@@ -40,7 +40,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 107899800
+              "duration": 252370200
             }
           },
           {
@@ -53,7 +53,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 240729099
+              "duration": 259660700
             }
           },
           {
@@ -66,7 +66,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 53108499
+              "duration": 44303899
             }
           },
           {
@@ -79,7 +79,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 13744999
+              "duration": 17339699
             }
           },
           {
@@ -92,7 +92,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1142794200
+              "duration": 1172998200
             }
           },
           {
@@ -105,7 +105,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 51290500
+              "duration": 56484999
             }
           },
           {
@@ -113,7 +113,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 33976899
+              "duration": 62655099
             }
           }
         ],
@@ -132,7 +132,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 206478500
+              "duration": 558117500
             }
           },
           {
@@ -145,7 +145,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1084817500
+              "duration": 2090583999
             }
           },
           {
@@ -158,7 +158,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 98321200
+              "duration": 226979999
             }
           },
           {
@@ -171,7 +171,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 260349599
+              "duration": 217681200
             }
           },
           {
@@ -184,7 +184,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 38146800
+              "duration": 42002899
             }
           },
           {
@@ -197,7 +197,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 11102399
+              "duration": 18670699
             }
           },
           {
@@ -210,7 +210,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1318680999
+              "duration": 438140799
             }
           },
           {
@@ -223,7 +223,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 49177599
+              "duration": 50631099
             }
           },
           {
@@ -231,7 +231,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 11625900
+              "duration": 61414999
             }
           }
         ],
@@ -261,7 +261,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 210350999
+              "duration": 549151300
             }
           },
           {
@@ -274,7 +274,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 2549875200
+              "duration": 1814787500
             }
           },
           {
@@ -287,7 +287,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 75933700
+              "duration": 284913300
             }
           },
           {
@@ -300,7 +300,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 269529899
+              "duration": 220390199
             }
           },
           {
@@ -313,7 +313,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 237015500
+              "duration": 122450100
             }
           },
           {
@@ -326,20 +326,20 @@
             },
             "result": {
               "status": "passed",
-              "duration": 9161100
+              "duration": 21462500
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
             "line": 11,
-            "name": "user enter valid email as \"dharshan354975650@gmail.com\"",
+            "name": "user enter valid email as \"dharshan235450@gmail.com\"",
             "match": {
               "location": "src\\test\\steps\\registerstep.ts:24"
             },
             "result": {
               "status": "passed",
-              "duration": 15146899
+              "duration": 36379899
             }
           },
           {
@@ -352,7 +352,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 11590199
+              "duration": 23896600
             }
           },
           {
@@ -365,7 +365,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 16885900
+              "duration": 21676500
             }
           },
           {
@@ -378,7 +378,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 13031100
+              "duration": 16698400
             }
           },
           {
@@ -391,7 +391,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 57869300
+              "duration": 70334400
             }
           },
           {
@@ -404,7 +404,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1518139999
+              "duration": 456289299
             }
           },
           {
@@ -416,16 +416,18 @@
               "location": "src\\test\\steps\\registerstep.ts:48"
             },
             "result": {
-              "status": "passed",
-              "duration": 44495100
+              "status": "failed",
+              "duration": 5010826699,
+              "error_message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('//h1[text()=\\'Your Account Has Been Created!\\']')\nExpected: \u001b[32m\"Your Account Has Been Created!\"\u001b[39m\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"to.have.text\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('//h1[text()=\\'Your Account Has Been Created!\\']')\u001b[22m\n\n    at captureRawStack (C:\\Users\\dhars\\Documents\\ExpleoTraining\\Playwright\\Playwright_BDD\\node_modules\\playwright-core\\lib\\coreBundle.js:3172:17)\n    at callMatcherAsStep (C:\\Users\\dhars\\Documents\\ExpleoTraining\\Playwright\\Playwright_BDD\\node_modules\\playwright\\lib\\matchers\\expect.js:12877:57)\n    at Object.toHaveText (C:\\Users\\dhars\\Documents\\ExpleoTraining\\Playwright\\Playwright_BDD\\node_modules\\playwright\\lib\\matchers\\expect.js:12867:23)\n    at CustomWorld.<anonymous> (C:\\Users\\dhars\\Documents\\ExpleoTraining\\Playwright\\Playwright_BDD\\src\\test\\steps\\registerstep.ts:49:84)"
             }
           },
           {
             "keyword": "After",
             "hidden": true,
             "result": {
-              "status": "passed",
-              "duration": 10760700
+              "status": "failed",
+              "duration": 613733199,
+              "error_message": "TypeError: this.attach is not a function\n    at CustomWorld.<anonymous> (C:\\Users\\dhars\\Documents\\ExpleoTraining\\Playwright\\Playwright_BDD\\src\\hooks\\hooks.ts:16:20)"
             }
           }
         ],

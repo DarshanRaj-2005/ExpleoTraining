@@ -8,8 +8,9 @@ module.exports = {
         ],
 
         require : [
-            "src/test/steps/**/*.ts",
-            "src/hooks/**/*.ts"
+            "src/test/stepdefinitions/**/*.ts",
+            "src/test/hooks/**/*.ts",
+            "src/test/world/**/*.ts"
             // "src/test/support/**/*.ts"
         ],
 

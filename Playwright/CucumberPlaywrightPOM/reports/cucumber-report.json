@@ -1,0 +1,171 @@
+[
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "saucedemo-login;valid-login",
+        "keyword": "Scenario",
+        "line": 6,
+        "name": "Valid Login",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 203877799
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "user is navigated to login page",
+            "match": {
+              "location": "src\\test\\stepdefinitions\\login.step.ts:6"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1732021600
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 7,
+            "name": "user enter \"valid\" credentails",
+            "match": {
+              "location": "src\\test\\stepdefinitions\\login.step.ts:11"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 100952699
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 8,
+            "name": "user clicks login button",
+            "match": {
+              "location": "src\\test\\stepdefinitions\\login.step.ts:18"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 73944300
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 9,
+            "name": "user should redirected to homepage",
+            "match": {
+              "location": "src\\test\\stepdefinitions\\login.step.ts:23"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 13641000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 50342800
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "saucedemo-login;invalid-login",
+        "keyword": "Scenario",
+        "line": 11,
+        "name": "Invalid Login",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 206864399
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "user is navigated to login page",
+            "match": {
+              "location": "src\\test\\stepdefinitions\\login.step.ts:6"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1631918499
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 12,
+            "name": "user enters \"invalid\" credentails",
+            "match": {
+              "location": "src\\test\\stepdefinitions\\login.step.ts:29"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 63220000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 13,
+            "name": "user clicks login button",
+            "match": {
+              "location": "src\\test\\stepdefinitions\\login.step.ts:18"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 53318299
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 14,
+            "name": "user should get a error message",
+            "match": {
+              "location": "src\\test\\stepdefinitions\\login.step.ts:35"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4916900
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 33514600
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "saucedemo-login",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "SauceDemo Login",
+    "tags": [],
+    "uri": "src\\test\\features\\login.feature"
+  }
+]

@@ -8,7 +8,7 @@ Scenario: Valid Register
     And user click on the Register link
     And user enter valid firstname as "dharshan"
     And user enter valid lastname as "raj"
-    And user enter valid email as "dharshan333450@gmail.com"
+    And user enter valid email as "dharshan256575432450@gmail.com"
     And user enter valid telephone as "1234567890"
     And user enter password as "1234"
     And user enter confirm password as "1234"

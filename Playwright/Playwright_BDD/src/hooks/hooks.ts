@@ -3,7 +3,7 @@ import {chromium} from "@playwright/test"
 
 
 Before(async function() {
-    this.broswer = await chromium.launch()
+    this.broswer = await chromium.launch({headless:false})
     this.context = await this.broswer.newContext()
     this.page = await this.context.newPage()
 })

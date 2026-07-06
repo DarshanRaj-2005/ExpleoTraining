@@ -1,0 +1,196 @@
+[
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "register-the-application;valid-register",
+        "keyword": "Scenario",
+        "line": 7,
+        "name": "Valid Register",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 550360999
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "User Navigate to the application",
+            "match": {
+              "location": "src\\test\\steps\\registerstep.ts:4"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1928002900
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 5,
+            "name": "user click on the my account link",
+            "match": {
+              "location": "src\\test\\steps\\registerstep.ts:8"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 321524800
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 8,
+            "name": "user click on the Register link",
+            "match": {
+              "location": "src\\test\\steps\\registerstep.ts:12"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1209370100
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 9,
+            "name": "user enter valid firstname as \"dharshan\"",
+            "match": {
+              "location": "src\\test\\steps\\registerstep.ts:16"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 265491900
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 10,
+            "name": "user enter valid lastname as \"raj\"",
+            "match": {
+              "location": "src\\test\\steps\\registerstep.ts:20"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 24644499
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 11,
+            "name": "user enter valid email as \"dharshan256575432450@gmail.com\"",
+            "match": {
+              "location": "src\\test\\steps\\registerstep.ts:24"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 22419899
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 12,
+            "name": "user enter valid telephone as \"1234567890\"",
+            "match": {
+              "location": "src\\test\\steps\\registerstep.ts:28"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 21757300
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 13,
+            "name": "user enter password as \"1234\"",
+            "match": {
+              "location": "src\\test\\steps\\registerstep.ts:32"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 21379799
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 14,
+            "name": "user enter confirm password as \"1234\"",
+            "match": {
+              "location": "src\\test\\steps\\registerstep.ts:36"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 20832300
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 15,
+            "name": "user check privacy and policy",
+            "match": {
+              "location": "src\\test\\steps\\registerstep.ts:40"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1461043999
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 16,
+            "name": "user click on the continue button",
+            "match": {
+              "location": "src\\test\\steps\\registerstep.ts:44"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3091690899
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 17,
+            "name": "register should be success",
+            "match": {
+              "location": "src\\test\\steps\\registerstep.ts:48"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 71649900
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 87558399
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "register-the-application",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "Register the application",
+    "tags": [],
+    "uri": "src\\test\\features\\register.feature"
+  }
+]
