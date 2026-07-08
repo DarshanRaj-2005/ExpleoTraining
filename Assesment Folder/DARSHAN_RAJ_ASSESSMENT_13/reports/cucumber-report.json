@@ -1,0 +1,287 @@
+[
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "login;verify-the-user-can-login",
+        "keyword": "Scenario Outline",
+        "line": 14,
+        "name": "Verify the user can login",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 591782600
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "the user is on Login page",
+            "match": {
+              "location": "src\\test\\steps\\login.step.ts:5"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3166105900
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 7,
+            "name": "the user enters the email \"darshan12345@gmail.com\"",
+            "match": {
+              "location": "src\\test\\steps\\login.step.ts:9"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 139023100
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 8,
+            "name": "the user enter the password \"123456\"",
+            "match": {
+              "location": "src\\test\\steps\\login.step.ts:13"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 25052399
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 9,
+            "name": "the user clicks Log in button",
+            "match": {
+              "location": "src\\test\\steps\\login.step.ts:17"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 652577000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 10,
+            "name": "the user should be redirected to homepage \"valid\" \"darshan12345@gmail.com\"",
+            "match": {
+              "location": "src\\test\\steps\\login.step.ts:21"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 254050599
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 2922000
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "login;verify-the-user-can-login",
+        "keyword": "Scenario Outline",
+        "line": 15,
+        "name": "Verify the user can login",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 530630500
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "the user is on Login page",
+            "match": {
+              "location": "src\\test\\steps\\login.step.ts:5"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3275726999
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 7,
+            "name": "the user enters the email \"darshan10@gmail.com\"",
+            "match": {
+              "location": "src\\test\\steps\\login.step.ts:9"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 66894300
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 8,
+            "name": "the user enter the password \"123456\"",
+            "match": {
+              "location": "src\\test\\steps\\login.step.ts:13"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 27699000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 9,
+            "name": "the user clicks Log in button",
+            "match": {
+              "location": "src\\test\\steps\\login.step.ts:17"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 390266800
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 10,
+            "name": "the user should be redirected to homepage \"invalid\" \"Login was unsuccessful. Please correct the errors and try again.\"",
+            "match": {
+              "location": "src\\test\\steps\\login.step.ts:21"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 118012699
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 10663800
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "login",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "Login",
+    "tags": [],
+    "uri": "src\\test\\features\\login.feature"
+  },
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "register;verify-the-user-can-successfully-register",
+        "keyword": "Scenario",
+        "line": 3,
+        "name": "Verify the user can successfully register",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 554938500
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 5,
+            "name": "the user is on Register page",
+            "match": {
+              "location": "src\\test\\steps\\register.step.ts:8"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3119403500
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 6,
+            "name": "the user enters the valid personal details and password",
+            "match": {
+              "location": "src\\test\\steps\\register.step.ts:12"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 214705600
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 7,
+            "name": "the user clicks register button",
+            "match": {
+              "location": "src\\test\\steps\\register.step.ts:16"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 829371500
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 8,
+            "name": "the user should get a success message",
+            "match": {
+              "location": "src\\test\\steps\\register.step.ts:20"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 131881300
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 2738499
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "register",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "Register",
+    "tags": [],
+    "uri": "src\\test\\features\\register.feature"
+  }
+]
