@@ -1,0 +1,9 @@
+timeStamp,elapsed,label,responseCode,responseMessage,threadName,dataType,success,failureMessage,bytes,sentBytes,grpThreads,allThreads,URL,Latency,IdleTime,Connect
+1784220052652,1043,TC_01 LaunchHomePage-46,200,OK,Thread Group 1-1,text,true,,2330,686,1,1,https://blazedemo.com/,1041,0,564
+1784220052569,1043,TC_01 LaunchHomePage,200,"Number of samples in transaction : 1, number of failing samples : 0",Thread Group 1-1,,true,,2330,686,1,1,null,1041,1160,564
+1784220054772,433,TC_01 LaunchHomePage-48,200,OK,Thread Group 1-1,text,true,,2417,898,1,1,https://blazedemo.com/reserve.php,431,0,0
+1784220054771,433,TC_02 FindFlight,200,"Number of samples in transaction : 1, number of failing samples : 0",Thread Group 1-1,,true,,2417,898,1,1,null,431,208,0
+1784220055413,458,TC_02 FindFlight-69,200,OK,Thread Group 1-1,text,true,,2653,959,1,1,https://blazedemo.com/purchase.php,452,0,0
+1784220055412,458,TC_03 Purchase,200,"Number of samples in transaction : 1, number of failing samples : 0",Thread Group 1-1,,true,,2653,959,1,1,null,452,4,0
+1784220055875,422,TC_03 Purchase-119,200,OK,Thread Group 1-1,text,true,,2433,1107,1,1,https://blazedemo.com/confirmation.php,420,0,0
+1784220055875,422,TC_04 BookFlight,200,"Number of samples in transaction : 1, number of failing samples : 0",Thread Group 1-1,,true,,2433,1107,1,1,null,420,2,0
