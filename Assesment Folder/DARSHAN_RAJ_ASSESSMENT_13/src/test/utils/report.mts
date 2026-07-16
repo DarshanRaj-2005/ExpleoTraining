@@ -4,7 +4,6 @@ report.generate({
   reportPath: "./reports/html",
   reportName: "Playwright BDD Report",
   pageTitle: "Tutorials Ninja Login and Register Test",
-  displayDuration: false,
   metadata: {
     browser: {
       name: "chrome",
@@ -19,7 +18,7 @@ report.generate({
   customData: {
     title: "Test Info",
     data: [
-      { label: "Project", value: "Book Cart Project" },
+      { label: "Project", value: "Login And Register Test" },
       { label: "Release", value: "1.2.3" },
       { label: "Cycle", value: "Smoke-1" },
     ],
