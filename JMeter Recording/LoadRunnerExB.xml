@@ -1,0 +1,278 @@
+timeStamp,elapsed,label,responseCode,responseMessage,threadName,dataType,success,failureMessage,bytes,sentBytes,grpThreads,allThreads,URL,Latency,IdleTime,Connect
+0,0,self.events.data.microsoft.com:443,,"Remote host terminated the handshake
+**ensure browser is set to accept the JMeter proxy certificate**",,,false,,1490,0,0,0,null,0,0,0
+0,0,self.events.data.microsoft.com:443,,"Remote host terminated the handshake
+**ensure browser is set to accept the JMeter proxy certificate**",,,false,,1490,0,0,0,null,0,0,0
+0,0,ecs.office.com:443,,"An established connection was aborted by the software in your host machine
+**ensure browser is set to accept the JMeter proxy certificate**",,,false,,1466,0,0,0,null,0,0,0
+0,0,self.events.data.microsoft.com:443,,"Remote host terminated the handshake
+**ensure browser is set to accept the JMeter proxy certificate**",,,false,,1490,0,0,0,null,0,0,0
+0,0,self.events.data.microsoft.com:443,,"Remote host terminated the handshake
+**ensure browser is set to accept the JMeter proxy certificate**",,,false,,1490,0,0,0,null,0,0,0
+0,0,mobile.events.data.microsoft.com:443,,"Remote host terminated the handshake
+**ensure browser is set to accept the JMeter proxy certificate**",,,false,,1490,0,0,0,null,0,0,0
+0,0,self.events.data.microsoft.com:443,,"Remote host terminated the handshake
+**ensure browser is set to accept the JMeter proxy certificate**",,,false,,1490,0,0,0,null,0,0,0
+0,0,g.live.com:443,,"Connection reset
+**ensure browser is set to accept the JMeter proxy certificate**",,,false,,1198,0,0,0,null,0,0,0
+0,0,g.live.com:443,,"Connection reset
+**ensure browser is set to accept the JMeter proxy certificate**",,,false,,1198,0,0,0,null,0,0,0
+0,0,self.events.data.microsoft.com:443,,"Remote host terminated the handshake
+**ensure browser is set to accept the JMeter proxy certificate**",,,false,,1490,0,0,0,null,0,0,0
+0,0,star-randsrv.bsg.brave.com:443,,"Received fatal alert: certificate_unknown
+**ensure browser is set to accept the JMeter proxy certificate**",,,false,,1372,0,0,0,null,0,0,0
+0,0,mobile.events.data.microsoft.com:443,,"Remote host terminated the handshake
+**ensure browser is set to accept the JMeter proxy certificate**",,,false,,1490,0,0,0,null,0,0,0
+0,0,self.events.data.microsoft.com:443,,"Remote host terminated the handshake
+**ensure browser is set to accept the JMeter proxy certificate**",,,false,,1490,0,0,0,null,0,0,0
+0,0,ecs.office.com:443,,"Connection reset
+**ensure browser is set to accept the JMeter proxy certificate**",,,false,,1198,0,0,0,null,0,0,0
+0,0,self.events.data.microsoft.com:443,,"Remote host terminated the handshake
+**ensure browser is set to accept the JMeter proxy certificate**",,,false,,1490,0,0,0,null,0,0,0
+0,0,g.live.com:443,,"Connection reset
+**ensure browser is set to accept the JMeter proxy certificate**",,,false,,1198,0,0,0,null,0,0,0
+0,0,self.events.data.microsoft.com:443,,"Remote host terminated the handshake
+**ensure browser is set to accept the JMeter proxy certificate**",,,false,,1490,0,0,0,null,0,0,0
+0,0,mobile.events.data.microsoft.com:443,,"Remote host terminated the handshake
+**ensure browser is set to accept the JMeter proxy certificate**",,,false,,1490,0,0,0,null,0,0,0
+0,0,g.live.com:443,,"Connection reset
+**ensure browser is set to accept the JMeter proxy certificate**",,,false,,1198,0,0,0,null,0,0,0
+0,0,self.events.data.microsoft.com:443,,"Remote host terminated the handshake
+**ensure browser is set to accept the JMeter proxy certificate**",,,false,,1490,0,0,0,null,0,0,0
+0,0,self.events.data.microsoft.com:443,,"Remote host terminated the handshake
+**ensure browser is set to accept the JMeter proxy certificate**",,,false,,1490,0,0,0,null,0,0,0
+1784463992914,42,/connecttest.txt-1,Non HTTP response code: java.net.UnknownHostException,Non HTTP response message: No such host is known (ipv6.msftncsi.com),,text,false,,2133,0,0,0,http://ipv6.msftncsi.com/connecttest.txt,0,0,41
+0,0,ecs.office.com:443,,"An established connection was aborted by the software in your host machine
+**ensure browser is set to accept the JMeter proxy certificate**",,,false,,1466,0,0,0,null,0,0,0
+0,0,loadrunnertips.com:443,,"Received fatal alert: certificate_unknown
+**ensure browser is set to accept the JMeter proxy certificate**",,,false,,1372,0,0,0,null,0,0,0
+0,0,self.events.data.microsoft.com:443,,"Remote host terminated the handshake
+**ensure browser is set to accept the JMeter proxy certificate**",,,false,,1490,0,0,0,null,0,0,0
+0,0,mobile.events.data.microsoft.com:443,,"Remote host terminated the handshake
+**ensure browser is set to accept the JMeter proxy certificate**",,,false,,1490,0,0,0,null,0,0,0
+0,0,g.live.com:443,,"Connection reset
+**ensure browser is set to accept the JMeter proxy certificate**",,,false,,1198,0,0,0,null,0,0,0
+0,0,self.events.data.microsoft.com:443,,"Remote host terminated the handshake
+**ensure browser is set to accept the JMeter proxy certificate**",,,false,,1490,0,0,0,null,0,0,0
+0,0,self.events.data.microsoft.com:443,,"Remote host terminated the handshake
+**ensure browser is set to accept the JMeter proxy certificate**",,,false,,1490,0,0,0,null,0,0,0
+0,0,ecs.office.com:443,,"Connection reset
+**ensure browser is set to accept the JMeter proxy certificate**",,,false,,1198,0,0,0,null,0,0,0
+0,0,collector.bsg.brave.com:443,,"Received fatal alert: certificate_unknown
+**ensure browser is set to accept the JMeter proxy certificate**",,,false,,1372,0,0,0,null,0,0,0
+1784463998163,1111,/-2,200,OK,,text,true,,18808,427,0,0,http://loadrunnertips.com/,764,0,443
+0,0,mobile.events.data.microsoft.com:443,,"Remote host terminated the handshake
+**ensure browser is set to accept the JMeter proxy certificate**",,,false,,1490,0,0,0,null,0,0,0
+1784463999320,721,/IMG/LR.gif-4,200,OK,,bin,true,,1940,386,0,0,http://loadrunnertips.com/IMG/LR.gif,721,0,414
+1784463999319,722,/JS/StyleSheet.css-3,200,OK,,text,true,,3810,347,0,0,http://loadrunnertips.com/JS/StyleSheet.css,722,0,415
+0,0,g.live.com:443,,"Connection reset
+**ensure browser is set to accept the JMeter proxy certificate**",,,false,,1198,0,0,0,null,0,0,0
+1784464000051,1015,/img/images.jpg-5,200,OK,,bin,true,,1895,407,0,0,http://loadrunnertips.com/img/images.jpg,1015,0,605
+1784464001074,1014,/favicon.ico-6,200,OK,,bin,true,,1480,387,0,0,http://loadrunnertips.com/favicon.ico,1014,0,606
+0,0,self.events.data.microsoft.com:443,,"Remote host terminated the handshake
+**ensure browser is set to accept the JMeter proxy certificate**",,,false,,1490,0,0,0,null,0,0,0
+0,0,inputsuggestions.msdxcdn.microsoft.com:443,,"Remote host terminated the handshake
+**ensure browser is set to accept the JMeter proxy certificate**",,,false,,1490,0,0,0,null,0,0,0
+0,0,mobile.events.data.microsoft.com:443,,"Remote host terminated the handshake
+**ensure browser is set to accept the JMeter proxy certificate**",,,false,,1490,0,0,0,null,0,0,0
+0,0,ecs.office.com:443,,"Connection reset
+**ensure browser is set to accept the JMeter proxy certificate**",,,false,,1198,0,0,0,null,0,0,0
+0,0,self.events.data.microsoft.com:443,,"Remote host terminated the handshake
+**ensure browser is set to accept the JMeter proxy certificate**",,,false,,1490,0,0,0,null,0,0,0
+0,0,self.events.data.microsoft.com:443,,"Remote host terminated the handshake
+**ensure browser is set to accept the JMeter proxy certificate**",,,false,,1490,0,0,0,null,0,0,0
+0,0,g.live.com:443,,"Remote host terminated the handshake
+**ensure browser is set to accept the JMeter proxy certificate**",,,false,,1490,0,0,0,null,0,0,0
+0,0,g.live.com:443,,"Connection reset
+**ensure browser is set to accept the JMeter proxy certificate**",,,false,,1198,0,0,0,null,0,0,0
+0,0,mobile.events.data.microsoft.com:443,,"Remote host terminated the handshake
+**ensure browser is set to accept the JMeter proxy certificate**",,,false,,1490,0,0,0,null,0,0,0
+0,0,self.events.data.microsoft.com:443,,"Remote host terminated the handshake
+**ensure browser is set to accept the JMeter proxy certificate**",,,false,,1490,0,0,0,null,0,0,0
+0,0,g.live.com:443,,"Remote host terminated the handshake
+**ensure browser is set to accept the JMeter proxy certificate**",,,false,,1490,0,0,0,null,0,0,0
+0,0,self.events.data.microsoft.com:443,,"Remote host terminated the handshake
+**ensure browser is set to accept the JMeter proxy certificate**",,,false,,1490,0,0,0,null,0,0,0
+0,0,self.events.data.microsoft.com:443,,"Remote host terminated the handshake
+**ensure browser is set to accept the JMeter proxy certificate**",,,false,,1490,0,0,0,null,0,0,0
+0,0,self.events.data.microsoft.com:443,,"Remote host terminated the handshake
+**ensure browser is set to accept the JMeter proxy certificate**",,,false,,1490,0,0,0,null,0,0,0
+0,0,ecs.office.com:443,,"Connection reset
+**ensure browser is set to accept the JMeter proxy certificate**",,,false,,1198,0,0,0,null,0,0,0
+0,0,self.events.data.microsoft.com:443,,"Remote host terminated the handshake
+**ensure browser is set to accept the JMeter proxy certificate**",,,false,,1490,0,0,0,null,0,0,0
+0,0,mobile.events.data.microsoft.com:443,,"Remote host terminated the handshake
+**ensure browser is set to accept the JMeter proxy certificate**",,,false,,1490,0,0,0,null,0,0,0
+0,0,self.events.data.microsoft.com:443,,"Remote host terminated the handshake
+**ensure browser is set to accept the JMeter proxy certificate**",,,false,,1490,0,0,0,null,0,0,0
+0,0,self.events.data.microsoft.com:443,,"Remote host terminated the handshake
+**ensure browser is set to accept the JMeter proxy certificate**",,,false,,1490,0,0,0,null,0,0,0
+0,0,g.live.com:443,,"Remote host terminated the handshake
+**ensure browser is set to accept the JMeter proxy certificate**",,,false,,1490,0,0,0,null,0,0,0
+0,0,self.events.data.microsoft.com:443,,"Remote host terminated the handshake
+**ensure browser is set to accept the JMeter proxy certificate**",,,false,,1490,0,0,0,null,0,0,0
+0,0,self.events.data.microsoft.com:443,,"Remote host terminated the handshake
+**ensure browser is set to accept the JMeter proxy certificate**",,,false,,1490,0,0,0,null,0,0,0
+0,0,ecs.office.com:443,,"Connection reset
+**ensure browser is set to accept the JMeter proxy certificate**",,,false,,1198,0,0,0,null,0,0,0
+0,0,self.events.data.microsoft.com:443,,"Remote host terminated the handshake
+**ensure browser is set to accept the JMeter proxy certificate**",,,false,,1490,0,0,0,null,0,0,0
+0,0,mobile.events.data.microsoft.com:443,,"Remote host terminated the handshake
+**ensure browser is set to accept the JMeter proxy certificate**",,,false,,1490,0,0,0,null,0,0,0
+0,0,self.events.data.microsoft.com:443,,"Remote host terminated the handshake
+**ensure browser is set to accept the JMeter proxy certificate**",,,false,,1490,0,0,0,null,0,0,0
+0,0,self.events.data.microsoft.com:443,,"Remote host terminated the handshake
+**ensure browser is set to accept the JMeter proxy certificate**",,,false,,1490,0,0,0,null,0,0,0
+0,0,g.live.com:443,,"Remote host terminated the handshake
+**ensure browser is set to accept the JMeter proxy certificate**",,,false,,1490,0,0,0,null,0,0,0
+0,0,www.bing.com:443,,"Received fatal alert: certificate_unknown
+**ensure browser is set to accept the JMeter proxy certificate**",,,false,,1372,0,0,0,null,0,0,0
+0,0,self.events.data.microsoft.com:443,,"Remote host terminated the handshake
+**ensure browser is set to accept the JMeter proxy certificate**",,,false,,1490,0,0,0,null,0,0,0
+0,0,self.events.data.microsoft.com:443,,"Remote host terminated the handshake
+**ensure browser is set to accept the JMeter proxy certificate**",,,false,,1490,0,0,0,null,0,0,0
+0,0,mobile.events.data.microsoft.com:443,,"Remote host terminated the handshake
+**ensure browser is set to accept the JMeter proxy certificate**",,,false,,1490,0,0,0,null,0,0,0
+0,0,self.events.data.microsoft.com:443,,"Remote host terminated the handshake
+**ensure browser is set to accept the JMeter proxy certificate**",,,false,,1490,0,0,0,null,0,0,0
+0,0,g.live.com:443,,"Connection reset
+**ensure browser is set to accept the JMeter proxy certificate**",,,false,,1198,0,0,0,null,0,0,0
+0,0,self.events.data.microsoft.com:443,,"Remote host terminated the handshake
+**ensure browser is set to accept the JMeter proxy certificate**",,,false,,1490,0,0,0,null,0,0,0
+0,0,g.live.com:443,,"Remote host terminated the handshake
+**ensure browser is set to accept the JMeter proxy certificate**",,,false,,1490,0,0,0,null,0,0,0
+0,0,ecs.office.com:443,,"Connection reset
+**ensure browser is set to accept the JMeter proxy certificate**",,,false,,1198,0,0,0,null,0,0,0
+0,0,self.events.data.microsoft.com:443,,"Remote host terminated the handshake
+**ensure browser is set to accept the JMeter proxy certificate**",,,false,,1490,0,0,0,null,0,0,0
+0,0,g.live.com:443,,"Remote host terminated the handshake
+**ensure browser is set to accept the JMeter proxy certificate**",,,false,,1490,0,0,0,null,0,0,0
+0,0,ecs.office.com:443,,"Connection reset
+**ensure browser is set to accept the JMeter proxy certificate**",,,false,,1198,0,0,0,null,0,0,0
+0,0,mobile.events.data.microsoft.com:443,,"Remote host terminated the handshake
+**ensure browser is set to accept the JMeter proxy certificate**",,,false,,1490,0,0,0,null,0,0,0
+0,0,self.events.data.microsoft.com:443,,"Remote host terminated the handshake
+**ensure browser is set to accept the JMeter proxy certificate**",,,false,,1490,0,0,0,null,0,0,0
+0,0,self.events.data.microsoft.com:443,,"Remote host terminated the handshake
+**ensure browser is set to accept the JMeter proxy certificate**",,,false,,1490,0,0,0,null,0,0,0
+0,0,self.events.data.microsoft.com:443,,"Remote host terminated the handshake
+**ensure browser is set to accept the JMeter proxy certificate**",,,false,,1490,0,0,0,null,0,0,0
+0,0,self.events.data.microsoft.com:443,,"Remote host terminated the handshake
+**ensure browser is set to accept the JMeter proxy certificate**",,,false,,1490,0,0,0,null,0,0,0
+0,0,graph.microsoft.com:443,,"Remote host terminated the handshake
+**ensure browser is set to accept the JMeter proxy certificate**",,,false,,1490,0,0,0,null,0,0,0
+0,0,g.live.com:443,,"Connection reset
+**ensure browser is set to accept the JMeter proxy certificate**",,,false,,1198,0,0,0,null,0,0,0
+0,0,g.live.com:443,,"Remote host terminated the handshake
+**ensure browser is set to accept the JMeter proxy certificate**",,,false,,1490,0,0,0,null,0,0,0
+0,0,ecs.office.com:443,,"Connection reset
+**ensure browser is set to accept the JMeter proxy certificate**",,,false,,1198,0,0,0,null,0,0,0
+0,0,mobile.events.data.microsoft.com:443,,"Remote host terminated the handshake
+**ensure browser is set to accept the JMeter proxy certificate**",,,false,,1490,0,0,0,null,0,0,0
+0,0,self.events.data.microsoft.com:443,,"Remote host terminated the handshake
+**ensure browser is set to accept the JMeter proxy certificate**",,,false,,1490,0,0,0,null,0,0,0
+0,0,login.live.com:443,,"Remote host terminated the handshake
+**ensure browser is set to accept the JMeter proxy certificate**",,,false,,1490,0,0,0,null,0,0,0
+0,0,self.events.data.microsoft.com:443,,"Remote host terminated the handshake
+**ensure browser is set to accept the JMeter proxy certificate**",,,false,,1490,0,0,0,null,0,0,0
+0,0,self.events.data.microsoft.com:443,,"Remote host terminated the handshake
+**ensure browser is set to accept the JMeter proxy certificate**",,,false,,1490,0,0,0,null,0,0,0
+1784464069813,885,/LoadRunner_Correlation_Challenge_Exp.aspx-7,200,OK,,text,true,,13317,479,0,0,http://loadrunnertips.com/LoadRunner_Correlation_Challenge_Exp.aspx,885,0,376
+1784464070769,852,/JS/JScript_CC.js-8,200,OK,,text,true,,1551,372,0,0,http://loadrunnertips.com/JS/JScript_CC.js,851,0,541
+0,0,ecs.office.com:443,,"Connection reset
+**ensure browser is set to accept the JMeter proxy certificate**",,,false,,1198,0,0,0,null,0,0,0
+0,0,self.events.data.microsoft.com:443,,"Remote host terminated the handshake
+**ensure browser is set to accept the JMeter proxy certificate**",,,false,,1490,0,0,0,null,0,0,0
+0,0,g.live.com:443,,"Connection reset
+**ensure browser is set to accept the JMeter proxy certificate**",,,false,,1198,0,0,0,null,0,0,0
+0,0,self.events.data.microsoft.com:443,,"Remote host terminated the handshake
+**ensure browser is set to accept the JMeter proxy certificate**",,,false,,1490,0,0,0,null,0,0,0
+0,0,g.live.com:443,,"Connection reset
+**ensure browser is set to accept the JMeter proxy certificate**",,,false,,1198,0,0,0,null,0,0,0
+0,0,mobile.events.data.microsoft.com:443,,"Remote host terminated the handshake
+**ensure browser is set to accept the JMeter proxy certificate**",,,false,,1490,0,0,0,null,0,0,0
+0,0,self.events.data.microsoft.com:443,,"Remote host terminated the handshake
+**ensure browser is set to accept the JMeter proxy certificate**",,,false,,1490,0,0,0,null,0,0,0
+0,0,self.events.data.microsoft.com:443,,"Remote host terminated the handshake
+**ensure browser is set to accept the JMeter proxy certificate**",,,false,,1490,0,0,0,null,0,0,0
+0,0,ecs.office.com:443,,"Connection reset
+**ensure browser is set to accept the JMeter proxy certificate**",,,false,,1198,0,0,0,null,0,0,0
+1784464080400,642,/LoadRunner_Correlation_Challenge_Exp.aspx-9,200,OK,,text,true,,11515,919,0,0,http://loadrunnertips.com/LoadRunner_Correlation_Challenge_Exp.aspx,642,0,331
+0,0,ecs.office.com:443,,"Connection reset
+**ensure browser is set to accept the JMeter proxy certificate**",,,false,,1198,0,0,0,null,0,0,0
+0,0,self.events.data.microsoft.com:443,,"Remote host terminated the handshake
+**ensure browser is set to accept the JMeter proxy certificate**",,,false,,1490,0,0,0,null,0,0,0
+0,0,self.events.data.microsoft.com:443,,"Remote host terminated the handshake
+**ensure browser is set to accept the JMeter proxy certificate**",,,false,,1490,0,0,0,null,0,0,0
+0,0,mobile.events.data.microsoft.com:443,,"Remote host terminated the handshake
+**ensure browser is set to accept the JMeter proxy certificate**",,,false,,1490,0,0,0,null,0,0,0
+0,0,self.events.data.microsoft.com:443,,"Remote host terminated the handshake
+**ensure browser is set to accept the JMeter proxy certificate**",,,false,,1490,0,0,0,null,0,0,0
+0,0,self.events.data.microsoft.com:443,,"Remote host terminated the handshake
+**ensure browser is set to accept the JMeter proxy certificate**",,,false,,1490,0,0,0,null,0,0,0
+0,0,g.live.com:443,,"Remote host terminated the handshake
+**ensure browser is set to accept the JMeter proxy certificate**",,,false,,1490,0,0,0,null,0,0,0
+0,0,g.live.com:443,,"Connection reset
+**ensure browser is set to accept the JMeter proxy certificate**",,,false,,1198,0,0,0,null,0,0,0
+0,0,ecs.office.com:443,,"Connection reset
+**ensure browser is set to accept the JMeter proxy certificate**",,,false,,1198,0,0,0,null,0,0,0
+0,0,self.events.data.microsoft.com:443,,"Remote host terminated the handshake
+**ensure browser is set to accept the JMeter proxy certificate**",,,false,,1490,0,0,0,null,0,0,0
+0,0,self.events.data.microsoft.com:443,,"Remote host terminated the handshake
+**ensure browser is set to accept the JMeter proxy certificate**",,,false,,1490,0,0,0,null,0,0,0
+1784464089662,1002,/LoadRunner_Correlation_Challenge_Exp.aspx-10,200,OK,,text,true,,14148,1029,0,0,http://loadrunnertips.com/LoadRunner_Correlation_Challenge_Exp.aspx,596,0,285
+0,0,self.events.data.microsoft.com:443,,"Remote host terminated the handshake
+**ensure browser is set to accept the JMeter proxy certificate**",,,false,,1490,0,0,0,null,0,0,0
+0,0,ecs.office.com:443,,"Connection reset
+**ensure browser is set to accept the JMeter proxy certificate**",,,false,,1198,0,0,0,null,0,0,0
+1784464090730,1372,/WebResource.axd-11,200,OK,,text,true,,23490,555,0,0,http://loadrunnertips.com/WebResource.axd?d=IVEgGxE0FnXPeaxIU600bvnvfjOXtkM2ch42l1w02mMMdCUY8-2QCfCLgQnb2YqL_yJKsjtoa_4cT7N4J2WvflKdXKjfbeHlKbR-Gf0uU601&t=638901289900000000,963,0,650
+1784464090730,1372,/WebResource.axd-12,200,OK,,text,true,,27378,555,0,0,http://loadrunnertips.com/WebResource.axd?d=jxM6E9QtzYoLiFrS8h4snKAjqh2QJ3Dc0XEnQcWoPizuCGVEKJhbo-_zhEUOGosS328fE3rlcqV60USylllANganuidpSl9aCz_yYJqw5Fw1&t=638901289900000000,963,0,651
+0,0,mobile.events.data.microsoft.com:443,,"Remote host terminated the handshake
+**ensure browser is set to accept the JMeter proxy certificate**",,,false,,1490,0,0,0,null,0,0,0
+0,0,self.events.data.microsoft.com:443,,"Remote host terminated the handshake
+**ensure browser is set to accept the JMeter proxy certificate**",,,false,,1490,0,0,0,null,0,0,0
+0,0,g.live.com:443,,"Remote host terminated the handshake
+**ensure browser is set to accept the JMeter proxy certificate**",,,false,,1490,0,0,0,null,0,0,0
+0,0,g.live.com:443,,"Connection reset
+**ensure browser is set to accept the JMeter proxy certificate**",,,false,,1198,0,0,0,null,0,0,0
+0,0,self.events.data.microsoft.com:443,,"Remote host terminated the handshake
+**ensure browser is set to accept the JMeter proxy certificate**",,,false,,1490,0,0,0,null,0,0,0
+0,0,mobile.events.data.microsoft.com:443,,"Remote host terminated the handshake
+**ensure browser is set to accept the JMeter proxy certificate**",,,false,,1490,0,0,0,null,0,0,0
+0,0,self.events.data.microsoft.com:443,,"Remote host terminated the handshake
+**ensure browser is set to accept the JMeter proxy certificate**",,,false,,1490,0,0,0,null,0,0,0
+0,0,ecs.office.com:443,,"Connection reset
+**ensure browser is set to accept the JMeter proxy certificate**",,,false,,1198,0,0,0,null,0,0,0
+1784464100868,759,/LoadRunner_Correlation_Challenge_Exp.aspx-13,200,OK,,text,true,,11331,1061,0,0,http://loadrunnertips.com/LoadRunner_Correlation_Challenge_Exp.aspx,755,0,444
+0,0,ecs.office.com:443,,"Connection reset
+**ensure browser is set to accept the JMeter proxy certificate**",,,false,,1198,0,0,0,null,0,0,0
+0,0,self.events.data.microsoft.com:443,,"Remote host terminated the handshake
+**ensure browser is set to accept the JMeter proxy certificate**",,,false,,1490,0,0,0,null,0,0,0
+0,0,mobile.events.data.microsoft.com:443,,"Remote host terminated the handshake
+**ensure browser is set to accept the JMeter proxy certificate**",,,false,,1490,0,0,0,null,0,0,0
+0,0,self.events.data.microsoft.com:443,,"Remote host terminated the handshake
+**ensure browser is set to accept the JMeter proxy certificate**",,,false,,1490,0,0,0,null,0,0,0
+0,0,self.events.data.microsoft.com:443,,"Remote host terminated the handshake
+**ensure browser is set to accept the JMeter proxy certificate**",,,false,,1490,0,0,0,null,0,0,0
+0,0,g.live.com:443,,"Remote host terminated the handshake
+**ensure browser is set to accept the JMeter proxy certificate**",,,false,,1490,0,0,0,null,0,0,0
+0,0,g.live.com:443,,"Connection reset
+**ensure browser is set to accept the JMeter proxy certificate**",,,false,,1198,0,0,0,null,0,0,0
+1784464107058,813,/LoadRunner_Correlation_Challenge_Exp.aspx-14,200,OK,,text,true,,10898,497,0,0,http://loadrunnertips.com/LoadRunner_Correlation_Challenge_Exp.aspx?RQM=580216428&RND=0.5995201746003638,813,0,404
+0,0,self.events.data.microsoft.com:443,,"Remote host terminated the handshake
+**ensure browser is set to accept the JMeter proxy certificate**",,,false,,1490,0,0,0,null,0,0,0
+0,0,ecs.office.com:443,,"Connection reset
+**ensure browser is set to accept the JMeter proxy certificate**",,,false,,1198,0,0,0,null,0,0,0
+0,0,chat.google.com:443,,"Received fatal alert: certificate_unknown
+**ensure browser is set to accept the JMeter proxy certificate**",,,false,,1372,0,0,0,null,0,0,0
+0,0,chat.google.com:443,,"Received fatal alert: certificate_unknown
+**ensure browser is set to accept the JMeter proxy certificate**",,,false,,1372,0,0,0,null,0,0,0
+1784466085058,767,/LoadRunner_Correlation_Challenge_Exp.aspx-15,200,OK,,text,true,,13317,531,0,0,http://loadrunnertips.com/LoadRunner_Correlation_Challenge_Exp.aspx,766,0,354
+0,0,chat.google.com:443,,"Received fatal alert: certificate_unknown
+**ensure browser is set to accept the JMeter proxy certificate**",,,false,,1372,0,0,0,null,0,0,0
+1784466088064,630,/LoadRunner_Correlation_Challenge_Exp.aspx-16,200,OK,,text,true,,11427,971,0,0,http://loadrunnertips.com/LoadRunner_Correlation_Challenge_Exp.aspx,630,0,317
+1784466093962,1691,/LoadRunner_Correlation_Challenge_Exp.aspx-17,200,OK,,text,true,,14148,1023,0,0,http://loadrunnertips.com/LoadRunner_Correlation_Challenge_Exp.aspx,1386,0,360
+0,0,peoplestack-pa.clients6.google.com:443,,"Received fatal alert: certificate_unknown
+**ensure browser is set to accept the JMeter proxy certificate**",,,false,,1372,0,0,0,null,0,0,0
+0,0,peoplestack-pa.clients6.google.com:443,,"Received fatal alert: certificate_unknown
+**ensure browser is set to accept the JMeter proxy certificate**",,,false,,1372,0,0,0,null,0,0,0
